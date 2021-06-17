@@ -80,7 +80,7 @@
         </div>
     </section>
 
-    <section class="services-area bg pb-70" id="cmProcedures">
+    <section class="services-area bg pt-100 pb-70" id="cmProcedures">
         <div class="container">
             <div class="section-title">
                 <h2>Common Procedures</h2>
