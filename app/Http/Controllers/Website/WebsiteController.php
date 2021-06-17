@@ -14,7 +14,7 @@ class WebsiteController extends Controller
      */
     public function index()
     {
-        return view('website.landingPage');
+        return view('website.landingPage')->with(["page" => "home"]);
     }
 
     
@@ -25,7 +25,7 @@ class WebsiteController extends Controller
      */
     public function about()
     {
-        return view('website.about');
+        return view('website.about')->with(["page" => "about"]);
     }
 
     
@@ -36,7 +36,7 @@ class WebsiteController extends Controller
      */
     public function conditionsAndTreatments()
     {
-        return view('website.conditions-and-treatments');
+        return view('website.conditions-and-treatments')->with(["page" => "condTrt"]);
     }
 
     
@@ -47,7 +47,29 @@ class WebsiteController extends Controller
      */
     public function gallery()
     {
-        return view('website.gallery');
+        return view('website.gallery')->with(["page" => "gallery"]);
+    }
+
+    
+    /**
+     * Clinical Images page
+     *
+     * @return Clinical Images page blade
+     */
+    public function clinicalImages()
+    {
+        return view('website.clinical-images')->with(["page" => "clinicalImg"]);
+    }
+
+    
+    /**
+     * Blogs page
+     *
+     * @return Blogs page blade
+     */
+    public function blogs()
+    {
+        return view('website.blogs')->with(["page" => "blogs"]);
     }
 
     
@@ -58,6 +80,6 @@ class WebsiteController extends Controller
      */
     public function contact()
     {
-        return view('website.contact');
+        return view('website.contact')->with(["page" => "contact"]);
     }
 }

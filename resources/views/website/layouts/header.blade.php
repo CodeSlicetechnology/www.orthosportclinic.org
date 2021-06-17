@@ -29,7 +29,7 @@
                     <ul class="header-content-right">
                         <li>
                             <a href="#">
-                                <i class="bx bxl-twitter"></i>
+                                <i class="bx bxl-facebook"></i>
                             </a>
                         </li>
                         <li>
@@ -40,6 +40,11 @@
                         <li>
                             <a href="#">
                                 <i class="bx bxl-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="bx bxl-twitter"></i>
                             </a>
                         </li>
                     </ul>
@@ -63,24 +68,27 @@
                         <div class="collapse navbar-collapse mean-menu justify-content-end" id="navbarSupportedContent">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a href="{{ route('/') }}" class="nav-link active">
+                                    <a href="{{ route('/') }}" class="nav-link {{ $page == 'home' ? 'active' : '' }}">
                                         Home
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ route('about') }}" class="nav-link">About Dr. Alva</a>
+                                    <a href="{{ route('about') }}" class="nav-link {{ $page == 'about' ? 'active' : '' }}">About Dr. Alva</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ route('/') }}#cmProcedures" class="nav-link">Common Procedures</a>
+                                    <a href="{{ route('conditions-and-treatments') }}" class="nav-link {{ $page == 'condTrt' ? 'active' : '' }}">Conditions & Treatments</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ route('conditions-and-treatments') }}" class="nav-link">Conditions & Treatments</a>
+                                    <a href="{{ route('clinical-images') }}" class="nav-link {{ $page == 'clinicalImg' ? 'active' : '' }}">Clinical Images</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ route('gallery') }}" class="nav-link">Gallery</a>
+                                    <a href="{{ route('blogs') }}" class="nav-link {{ $page == 'blogs' ? 'active' : '' }}">Blogs</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ route('contact') }}" class="nav-link">Contact Us</a>
+                                    <a href="{{ route('gallery') }}" class="nav-link {{ $page == 'gallery' ? 'active' : '' }}">Gallery</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('contact') }}" class="nav-link {{ $page == 'contact' ? 'active' : '' }}">Contact Us</a>
                                 </li>
                             </ul>
                         </div>

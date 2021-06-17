@@ -15,6 +15,8 @@ Route::get('/', 'Website\WebsiteController@index')->name('/');
 Route::get('about', 'Website\WebsiteController@about')->name('about');
 Route::get('conditions-and-treatments', 'Website\WebsiteController@conditionsAndTreatments')->name('conditions-and-treatments');
 Route::get('gallery', 'Website\WebsiteController@gallery')->name('gallery');
+Route::get('clinical-images', 'Website\WebsiteController@clinicalImages')->name('clinical-images');
+Route::get('blogs', 'Website\WebsiteController@blogs')->name('blogs');
 Route::get('contact', 'Website\WebsiteController@contact')->name('contact');
 
 Auth::routes();

@@ -2670,19 +2670,24 @@
 
 @media only screen and (max-width:991px) {
     .mean-container .mean-bar {
-        background-color: #1ec6db;
+        background-color: #fff;
         -webkit-box-shadow: 0 20px 20px 20px rgba(0, 0, 0, .05);
         box-shadow: 0 20px 20px 20px rgba(0, 0, 0, .05);
-        height: 70px
+        height: 93px
+    }
+
+    .main-banner-area-four .shape {
+        position: relative;
+        padding-bottom: 60px;
     }
 
     .mean-container a.meanmenu-reveal {
-        padding: 24px 15px 0 0;
+        padding: 36px 25px 0 0;
         color: #fff
     }
 
     .mean-container a.meanmenu-reveal span {
-        background-color: #fff;
+        background-color: #343a40;
         position: relative;
         top: 8px;
         margin-top: -5px
@@ -2697,11 +2702,11 @@
     }
 
     .mobile-nav.mean-container .mean-nav ul li a:hover {
-        color: #05e8c2
+        color: #00b2f6
     }
 
     .mobile-nav.mean-container .mean-nav ul li a.active {
-        color: #05e8c2
+        color: #00b2f6
     }
 
     .nav-area .others-option {

@@ -14,72 +14,6 @@
             $(".navbar-area").removeClass("is-sticky");
         }
     });
-    $(".hero-slider-wrap").owlCarousel({
-        loop: true,
-        margin: 0,
-        nav: false,
-        mouseDrag: true,
-        items: 1,
-        dots: true,
-        autoHeight: true,
-        autoplay: true,
-        smartSpeed: 800,
-        autoplayHoverPause: true,
-        navText: [
-            "<i class='flaticon-back'></i>",
-            "<i class='flaticon-right'></i>",
-        ],
-    });
-    $(".hero-slider-wrap-eight").owlCarousel({
-        loop: true,
-        margin: 0,
-        nav: true,
-        mouseDrag: true,
-        items: 1,
-        dots: false,
-        autoHeight: true,
-        autoplay: true,
-        smartSpeed: 800,
-        autoplayHoverPause: true,
-        animateOut: "slideOutDown",
-        animateIn: "slideInDown",
-        navText: [
-            "<i class='bx bx-chevron-left'></i>",
-            "<i class='bx bx-chevron-right'></i>",
-        ],
-    });
-    $(".doctors-wrap").owlCarousel({
-        loop: true,
-        nav: true,
-        autoplay: true,
-        autoplayHoverPause: true,
-        mouseDrag: true,
-        margin: 30,
-        center: true,
-        dots: false,
-        smartSpeed: 1500,
-        navText: [
-            "<i class='bx bx-chevron-left'></i>",
-            "<i class='bx bx-chevron-right'></i>",
-        ],
-        responsive: {
-            0: {
-                items: 1,
-            },
-            576: {
-                items: 2,
-            },
-            768: {
-                items: 2,
-            },
-            992: {
-                items: 3,
-            },
-            1200: {
-                items: 3,
-            },
-        },
-    });
     $(".work-wrap").owlCarousel({
         loop: true,
         nav: false,
@@ -95,114 +29,21 @@
                 items: 1,
             },
             576: {
-                items: 1,
+                items: 2,
             },
             768: {
-                items: 2,
-            },
-            992: {
                 items: 3,
             },
-            1200: {
-                items: 3,
-            },
-        },
-    });
-    $(".client-wrap").owlCarousel({
-        loop: true,
-        margin: 0,
-        nav: false,
-        mouseDrag: true,
-        items: 1,
-        dots: false,
-        autoHeight: true,
-        autoplay: true,
-        smartSpeed: 1500,
-        autoplayHoverPause: true,
-        center: false,
-        responsive: {
-            0: {
-                items: 1,
-                margin: 10,
-            },
-            576: {
-                items: 1,
-            },
-            768: {
-                items: 2,
-                margin: 20,
-            },
             992: {
-                items: 2,
+                items: 4,
             },
             1200: {
-                items: 2,
+                items: 5,
+            },
+            1500: {
+                items: 6,
             },
         },
-    });
-    $(".client-wrap-two").owlCarousel({
-        loop: true,
-        margin: 30,
-        nav: false,
-        mouseDrag: true,
-        items: 1,
-        dots: false,
-        autoHeight: true,
-        autoplay: true,
-        smartSpeed: 1500,
-        autoplayHoverPause: true,
-    });
-    $(".banner-image-slider").owlCarousel({
-        loop: true,
-        nav: false,
-        dots: true,
-        autoplayHoverPause: true,
-        autoplay: true,
-        autoplayTimeout: 2500,
-        autoHeight: true,
-        items: 1,
-        animateOut: "fadeOut",
-        margin: 0,
-    });
-    $(".about-img-wrap").owlCarousel({
-        loop: true,
-        nav: true,
-        dots: false,
-        autoplayHoverPause: true,
-        autoplay: true,
-        autoplayTimeout: 2500,
-        autoHeight: true,
-        items: 1,
-        animateOut: "fadeOut",
-        margin: 0,
-        navText: ["<i class='bx bx-chevron-right'></i>"],
-    });
-    $(".services-item-wrap").owlCarousel({
-        loop: true,
-        nav: false,
-        dots: true,
-        autoplayHoverPause: true,
-        autoplay: true,
-        autoplayTimeout: 2500,
-        autoHeight: true,
-        items: 1,
-        animateOut: "fadeOut",
-        margin: 0,
-    });
-    $(".odometer").appear(function (e) {
-        var odo = $(".odometer");
-        odo.each(function () {
-            var countNumber = $(this).attr("data-count");
-            $(this).html(countNumber);
-        });
-    });
-    $("#datetimepicker2").datepicker({
-        weekStart: 0,
-        todayBtn: "linked",
-        language: "es",
-        orientation: "bottom auto",
-        keyboardNavigation: false,
-        autoclose: true,
     });
     $(window).on("scroll", function () {
         var scrolled = $(window).scrollTop();
@@ -233,10 +74,5 @@
         $(".search-overlay").fadeOut();
         $(".search-btn").show();
         $(".close-btn").removeClass("active");
-    });
-    $(".search-btn").on("click", function () {
-        $(this).hide();
-        $(".search-overlay").fadeIn();
-        $(".close-btn").addClass("active");
     });
 })(jQuery);

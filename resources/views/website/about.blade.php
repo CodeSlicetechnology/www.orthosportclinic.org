@@ -30,51 +30,49 @@
                         <div class="row pb-2">                            
                             <div class="col-sm-12 col-md-2 col-lg-2">
                                 <div class="assessments-img pb-3">
-                                    <img class="width-100 border-3px box-shadow" src="{{ asset('website/img/avinash-dark.jpg') }}" alt="Image">
+                                    <img class="width-100 box-shadow" src="{{ asset('website/img/avinash-dark.jpg') }}" alt="Image">
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-10 col-lg-10">
-                                <h2>Dr. Avinash Alva <small class="font-12pt">(Professional Journey & International Profile)</small></h2>
-                                <span class="font-12pt font-weight-normal text-info">
-                                    FRCSEd (Trauma & Orth), MS (Ortho), Pg Cert (Orth Research, UK), <br />
-                                    MRCSEd (Sur), MBBS (Manipal Uni) Fellowship trained in Knee, <br />
-                                    Anterior Hip & Shoulder Surgery
+                                <h4 class="font-weight-normal mb-0">Dr. Avinash Alva</h4>
+                                <p class="font-10pt mb-2 text-dark">(Professional Journey & International Profile)</p>
+                                <span class="font-10pt font-weight-normal text-secondary">
+                                    FRCSEd (Trauma & Orth), MS (Ortho), Pg Cert (Orth Research, UK), MRCSEd (Sur), MBBS (Manipal Uni) <br /> 
+                                    Fellowship trained in Knee, Anterior Hip & Shoulder Surgery
                                 </span>
                             </div>
                         </div>                        
                         
-                        <p>
+                        <p class="text-justify">
                             Dr. Avinash Alva studied medicine at Kasturba Medical College, Mangalore and completed M.S (Ortho) from Rajiv Gandhi University, Bangalore. He undertook basic surgical training in Yorkshire, research fellowship at Wrightington Hospital and registrar training in Northwest London. He passed Membership exams of Royal College of surgeons in 2006 and graduated as Fellow of the Royal College of Surgeons (Edinburgh) in Orthopaedic Surgery. 
                         </p>
-
-                        <span class="py-3"><hr /></span>
                         
-                        <div class="emergency-contents">
-                            <h4 class="text-info font-weight-normal mb-3"><u>Post-FRCS Subspecialist Fellowships</u></h4>
+                        <div class="emergency-contents pt-4">
+                            <h5 class="text-warning font-weight-normal mb-3"><u>Post-FRCS Subspecialist Fellowships</u></h5>
 
                             <h6>Chelsea-Fortius Complex Knee Fellowship</h6>
-                            <p>
+                            <p class="text-justify">
                                 In 2017 Dr. Alva was appointed as Complex Knee fellow to work at London’s Chelsea & Westminster Hospital and Fortius Clinic. He was fellow to Dr. Andy Williams for 9 months. Patient load included referrals from majority of English premier league football clubs, rugby clubs, Olympic athletes and International cricketers. The surgical training involved management of complex knee problems, surgery in elite athletes and robotic joint replacements.
                             </p>
                             
                             <h6>Accredited Fellowships in Australia</h6>
-                            <p>
+                            <p class="text-justify">
                                 At Melbourne, Dr Alva worked for 2 years at Australia’s busiest centre for anterior hip surgery. Cases included bikini hip replacements, PSI knee replacements, hip arthroscopy, sports surgery and enhanced recovery techniques. At Canberra, he undertook a 6-month shoulder fellowship that focused on arthroscopic and open surgery of the shoulder joint.
                             </p>
                         </div>
                         
                         
                         <div class="emergency-contents pt-4">
-                            <h4 class="text-info font-weight-normal mb-3"><u>Team Medical Cover & Sports</u></h4>
+                            <h5 class="text-warning font-weight-normal mb-3"><u>Team Medical Cover & Sports</u></h5>
 
-                            <p>
+                            <p class="text-justify">
                                 Dr.Alva has provided team medical cover for sports events and cricket matches involving the Indian cricket team (BCCI). He has played a variety of sports and has represented the following cricket teams - Manipal University, Karnataka state junior reserves and Newburgh club in Lancashire. 
                             </p>
                         </div>
                         
                         
                         <div class="emergency-contents pt-4">
-                            <h4 class="text-info font-weight-normal mb-3"><u>Professional Associations</u></h4>
+                            <h5 class="text-warning font-weight-normal mb-3"><u>Professional Associations</u></h5>
 
                             <ul class="mb-0">
                                 <li>Royal College of Surgeons, UK</li>
@@ -85,7 +83,11 @@
                                 <li>FAGE, Manipal</li>
                             </ul>
                         </div>
+                    </div>
 
+                    <br />
+
+                    <div class="doctors-history">
                         <div class="faq-accordion pt-3">
                             <ul class="accordion">
                                 <li class="accordion-item">
@@ -95,36 +97,36 @@
                                     </a>
                                     <div class="accordion-content">
                                         <div class="pb-2">
-                                            <p class="text-info mb-0 font-weight-bold">FRCSEd (Trauma and Orthopaedics): </p>
-                                            <p>
+                                            <p class="text-warning mb-0 font-weight-bold">FRCSEd (Trauma and Orthopaedics): </p>
+                                            <p class="text-justify">
                                                 Royal College of Surgeons, Edinburgh, UK
                                             </p>
                                         </div>
 
                                         <div class="pb-2">
-                                            <p class="text-info mb-0 font-weight-bold">MS (Ortho): </p>
-                                            <p>
+                                            <p class="text-warning mb-0 font-weight-bold">MS (Ortho): </p>
+                                            <p class="text-justify">
                                                 Rajiv Gandhi University of Health Sciences, India
                                             </p>
                                         </div>
 
                                         <div class="pb-2">
-                                            <p class="text-info mb-0 font-weight-bold">Post Graduate Certificate (Orthopaedic Research): </p>
-                                            <p>
+                                            <p class="text-warning mb-0 font-weight-bold">Post Graduate Certificate (Orthopaedic Research): </p>
+                                            <p class="text-justify">
                                                 Edgehill University, UK
                                             </p>
                                         </div>
 
                                         <div class="pb-2">
-                                            <p class="text-info mb-0 font-weight-bold">MRCSEd: </p>
-                                            <p>
+                                            <p class="text-warning mb-0 font-weight-bold">MRCSEd: </p>
+                                            <p class="text-justify">
                                                 Royal College of Surgeons, Edinburgh, UK
                                             </p>
                                         </div>
 
                                         <div class="pb-2">
-                                            <p class="text-info mb-0 font-weight-bold">MBBS: </p>
-                                            <p>
+                                            <p class="text-warning mb-0 font-weight-bold">MBBS: </p>
+                                            <p class="text-justify">
                                                 Kasturba Medical College, Mangalore
                                             </p>
                                         </div>
@@ -137,7 +139,7 @@
                                     </a>
                                     <div class="accordion-content">
                                         <div class="pb-2 emergency-contents">
-                                            <p class="text-info mb-0 font-weight-bold">Melbourne Anterior Hip, Knee and Sports Surgery Fellowship <i>(AOA Accredited)</i> </p>
+                                            <p class="text-warning mb-0 font-weight-bold">Melbourne Anterior Hip, Knee and Sports Surgery Fellowship <i>(AOA Accredited)</i> </p>
                                             <ul class="mb-4">
                                                 <li>Epworth Hospital</li>
                                                 <li>Cabrini Hospital</li>
@@ -145,7 +147,7 @@
                                         </div>
 
                                         <div class="pb-2 emergency-contents">
-                                            <p class="text-info mb-0 font-weight-bold">Canberra Shoulder and Sports Surgery Fellowship, Aus <i>(AOA Accredited)</i> </p>
+                                            <p class="text-warning mb-0 font-weight-bold">Canberra Shoulder and Sports Surgery Fellowship, Aus <i>(AOA Accredited)</i> </p>
                                             <ul class="mb-4">
                                                 <li>National Capital Private Hospital</li>
                                                 <li>Canberra Private Hospital</li>
@@ -153,7 +155,7 @@
                                         </div>
 
                                         <div class="pb-2 emergency-contents">
-                                            <p class="text-info mb-0 font-weight-bold">Chelsea-Fortius Complex Knee Fellowship, London <i>(Elite athlete surgery/Robotics)</i> </p>
+                                            <p class="text-warning mb-0 font-weight-bold">Chelsea-Fortius Complex Knee Fellowship, London <i>(Elite athlete surgery/Robotics)</i> </p>
                                             <ul class="mb-4">
                                                 <li>Chelsea and Westminster Hospital </li>
                                                 <li>Fortius Clinic (FIFA centre of excellence)</li>
@@ -161,7 +163,7 @@
                                         </div>
 
                                         <div class="pb-2 emergency-contents">
-                                            <p class="text-info mb-0 font-weight-bold">Specialist Registrar, Trauma & Orthopaedics <i>(Knee, Hip, Shoulder, Spine, Paediatric Orthopaedics, Trauma, Hands)</i> </p>
+                                            <p class="text-warning mb-0 font-weight-bold">Specialist Registrar, Trauma & Orthopaedics <i>(Knee, Hip, Shoulder, Spine, Paediatric Orthopaedics, Trauma, Hands)</i> </p>
                                             <ul class="mb-4">
                                                 <li>Royal National Orthopaedic Hospital, Stanmore, London</li>
                                                 <li>North West London Hospitals NHS Trust, London</li>
@@ -170,14 +172,14 @@
                                         </div>
 
                                         <div class="pb-2 emergency-contents">
-                                            <p class="text-info mb-0 font-weight-bold">Clinical Research Fellowship <i>(Knee, Hip, Upper limb)</i> </p>
+                                            <p class="text-warning mb-0 font-weight-bold">Clinical Research Fellowship <i>(Knee, Hip, Upper limb)</i> </p>
                                             <ul class="mb-4">
                                                 <li>Wrightington Hospital, UK</li>
                                             </ul>
                                         </div>
 
                                         <div class="pb-2 emergency-contents">
-                                            <p class="text-info mb-0 font-weight-bold">Basic Surgical training <i>(Orthopaedics, Plastic Surgery, Colorectal surgery)</i> </p>
+                                            <p class="text-warning mb-0 font-weight-bold">Basic Surgical training <i>(Orthopaedics, Plastic Surgery, Colorectal surgery)</i> </p>
                                             <ul class="mb-4">
                                                 <li>St. James’s University Hospital, Leeds</li>
                                                 <li>Leeds General Infirmary, Leeds</li>
@@ -192,38 +194,38 @@
                                     </a>
                                     <div class="accordion-content">
                                         <div class="pb-4 emergency-contents">
-                                            <p class="text-info mb-0 font-weight-bold">
-                                                1) Dr Alva completed a two year Postgraduate Certificate program in Orthopaedic research at Wrightington hospital. 
+                                            <p class="mb-0 font-weight-bold">
+                                                -> Dr Alva completed a two year Postgraduate Certificate program in Orthopaedic research at Wrightington hospital. 
                                             </p>
                                         </div>
 
                                         <div class="pb-4 emergency-contents">
-                                            <p class="text-info mb-0 font-weight-bold">
-                                                2) Faculty at the Royal National Orthopedic Hospital FRCS orthopedics course since 2016 for candidates sitting the British exit exam.  
+                                            <p class="mb-0 font-weight-bold">
+                                                -> Faculty at the Royal National Orthopedic Hospital FRCS orthopedics course since 2016 for candidates sitting the British exit exam.  
                                             </p>
                                         </div>
 
                                         <div class="pb-4 emergency-contents">
-                                            <p class="text-info mb-0 font-weight-bold">
-                                                3) Invited reviewer for Bone and Joint Journal, British edition that involves assessment of research papers for publication.  
+                                            <p class="mb-0 font-weight-bold">
+                                                -> Invited reviewer for Bone and Joint Journal, British edition that involves assessment of research papers for publication.  
                                             </p>
                                         </div>
 
                                         <div class="pb-4 emergency-contents">
-                                            <p class="text-info mb-0 font-weight-bold">
-                                                4) Over 10 years experience of combining patient care and research 
+                                            <p class="mb-0 font-weight-bold">
+                                                -> Over 10 years experience of combining patient care and research 
                                             </p>
                                         </div>
 
                                         <div class="pb-4 emergency-contents">
-                                            <p class="text-info mb-0 font-weight-bold">
-                                                5) Involved in clinical teaching for medical students and residents since 2013 
+                                            <p class="mb-0 font-weight-bold">
+                                                -> Involved in clinical teaching for medical students and residents since 2013 
                                             </p>
                                         </div>
 
                                         <div class="pb-4 emergency-contents">
-                                            <p class="text-info mb-0 font-weight-bold">
-                                                6) Presentations and publications in reputed peer reviewed research journals on topics including
+                                            <p class="mb-0 font-weight-bold">
+                                                -> Presentations and publications in reputed peer reviewed research journals on topics including
                                             </p>
                                             <ul class="mb-0 ml-4">
                                                 <li>Surgery in elite athletes</li>
@@ -237,6 +239,38 @@
                                                 <li>Bone grafting in revision hip replacement</li>
                                             </ul>
                                         </div>
+                                        
+                                        <div class="work-wrap owl-carousel owl-theme">                                            
+                                            <div class="single-work">
+                                                <a target="_blank" href="{{ asset('website/img/screenshots/1.jpg') }}" title="Click to open">
+                                                    <img src="{{ asset('website/img/screenshots/1.jpg') }}" alt="Image">
+                                                </a>
+                                            </div>
+                                            
+                                            <div class="single-work">
+                                                <a target="_blank" href="{{ asset('website/img/screenshots/2.jpg') }}" title="Click to open">
+                                                    <img src="{{ asset('website/img/screenshots/2.jpg') }}" alt="Image">
+                                                </a>
+                                            </div>
+                                            
+                                            <div class="single-work">
+                                                <a target="_blank" href="{{ asset('website/img/screenshots/3.jpg') }}" title="Click to open">
+                                                    <img src="{{ asset('website/img/screenshots/3.jpg') }}" alt="Image">
+                                                </a>
+                                            </div>
+                                            
+                                            <div class="single-work">
+                                                <a target="_blank" href="{{ asset('website/img/screenshots/4.jpg') }}" title="Click to open">
+                                                    <img src="{{ asset('website/img/screenshots/4.jpg') }}" alt="Image">
+                                                </a>
+                                            </div>
+                                            
+                                            <div class="single-work">
+                                                <a target="_blank" href="{{ asset('website/img/screenshots/5.jpg') }}" title="Click to open">
+                                                    <img src="{{ asset('website/img/screenshots/5.jpg') }}" alt="Image">
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </li>
                                 <li class="accordion-item">
@@ -246,7 +280,7 @@
                                     </a>
                                     <div class="accordion-content">
                                         <div class="pb-2">
-                                            <p>
+                                            <p class="text-justify">
                                                 Dr Alva was involved in the RCT studying “Stem Cell treatment for osteochondral defects in the knee” in the Joint reconstruction Unit at Royal National Orthopaedic Hospital, London.
                                             </p>
                                         </div>
@@ -283,7 +317,7 @@
                                     </a>
                                     <div class="accordion-content">
                                         <div class="pb-2">
-                                            <p>
+                                            <p class="text-justify">
                                                 “Bone and Joint Care Paths” Simon Grange, Alva A et al Incisive Publishing Dec 2014.
                                             </p>
                                         </div>
@@ -296,7 +330,7 @@
                                     </a>
                                     <div class="accordion-content">
                                         <div class="pb-2">
-                                            <p>
+                                            <p class="text-justify">
                                                 Bikini Anterior Hip Replacements in Obese Patients Pose Minimal Complications. Nizam I, Alva A, Dabirrehmani D 
                                             </p>
                                         </div>
@@ -309,7 +343,7 @@
                                     </a>
                                     <div class="accordion-content">
                                         <div class="pb-4 emergency-contents">
-                                            <p class="text-info mb-0 font-weight-bold">
+                                            <p class="text-warning mb-0 font-weight-bold">
                                                 “Radiographic evaluation of femoral cementation in bikini incision anterior total hip arthroplasty on a standard operating table” Alva A, Gogos S, Nizam I
                                             </p>
                                             <ul class="mb-0 ml-4">
@@ -318,7 +352,7 @@
                                         </div>
 
                                         <div class="pb-4 emergency-contents">
-                                            <p class="text-info mb-0 font-weight-bold">
+                                            <p class="text-warning mb-0 font-weight-bold">
                                                 “Arthroscopic superior capsular reconstruction – Early results” Alva A, Damiani M
                                             </p>
                                             <ul class="mb-0 ml-4">
@@ -327,7 +361,7 @@
                                         </div>
 
                                         <div class="pb-4 emergency-contents">
-                                            <p class="text-info mb-0 font-weight-bold">
+                                            <p class="text-warning mb-0 font-weight-bold">
                                                 “Single stage ACL revision: an algorithm for treatment and experience of 106 cases including 34 elite athletes.” White N, Alva A, Williams A
                                             </p>
                                             <ul class="mb-0 ml-4">
@@ -337,7 +371,7 @@
                                         </div>
 
                                         <div class="pb-4 emergency-contents">
-                                            <p class="text-info mb-0 font-weight-bold">
+                                            <p class="text-warning mb-0 font-weight-bold">
                                                 “Non traumatic dislocation of a mobile bearing polyethylene in a medial Unicompartmental knee replacement causing severe metal debris” Apostolopolous A, Alva A, Saavedra E.
                                             </p>
                                             <ul class="mb-0 ml-4">
@@ -346,7 +380,7 @@
                                         </div>
 
                                         <div class="pb-4 emergency-contents">
-                                            <p class="text-info mb-0 font-weight-bold">
+                                            <p class="text-warning mb-0 font-weight-bold">
                                                 “Surgical Options in management of failed trapeziectomies: A series of 4 cases” Alva A.M, Ng CY, Talwalkar SC, Hayton M. 
                                             </p>
                                             <ul class="mb-0 ml-4">
@@ -356,7 +390,7 @@
                                         </div>
 
                                         <div class="pb-4 emergency-contents">
-                                            <p class="text-info mb-0 font-weight-bold">
+                                            <p class="text-warning mb-0 font-weight-bold">
                                                 ”Lateral Opening versus Medial Closing Wedge Distal Femoral Varus Osteotomy - Is there a difference in achieving desired realignment?” Alva A, Coupe BD, Rae PJ
                                             </p>
                                             <ul class="mb-0 ml-4">
@@ -365,7 +399,7 @@
                                         </div>
 
                                         <div class="pb-4 emergency-contents">
-                                            <p class="text-info mb-0 font-weight-bold">
+                                            <p class="text-warning mb-0 font-weight-bold">
                                                 “Effect of the overall Injury Severity upon Union and Complication rates of Open IIIa – IIIb Tibial Fractures” Alva AM, Kanakaris N, PV Giannoudis
                                             </p>
                                             <ul class="mb-0 ml-4">
@@ -376,7 +410,7 @@
                                         </div>
 
                                         <div class="pb-4 emergency-contents">
-                                            <p class="text-info mb-0 font-weight-bold">
+                                            <p class="text-warning mb-0 font-weight-bold">
                                                 “Necrotizing Fasciitis: A series of seven cases.” Alva A.M, Shah N, Talwalkar ST
                                             </p>
                                             <ul class="mb-0 ml-4">
@@ -385,7 +419,7 @@
                                         </div>
 
                                         <div class="pb-4 emergency-contents">
-                                            <p class="text-info mb-0 font-weight-bold">
+                                            <p class="text-warning mb-0 font-weight-bold">
                                                 “Shortened antibiotic prophylaxis regime in pelvi-acetabular surgery.” Lee NY, Alva A.M, Shah.N, Clayson A
                                             </p>
                                             <ul class="mb-0 ml-4">
@@ -394,7 +428,7 @@
                                         </div>
 
                                         <div class="pb-4 emergency-contents">
-                                            <p class="text-info mb-0 font-weight-bold">
+                                            <p class="text-warning mb-0 font-weight-bold">
                                                 “Structural bone grafting in Acetabular revision surgery – Medium term results” Alva A, Hemmady MV, Hodgkinson JP 
                                             </p>
                                             <ul class="mb-0 ml-4">
@@ -403,7 +437,7 @@
                                         </div>
 
                                         <div class="pb-4 emergency-contents">
-                                            <p class="text-info mb-0 font-weight-bold">
+                                            <p class="text-warning mb-0 font-weight-bold">
                                                 “The time delay between prescription and administration of the first dose of iv antibiotics in sepsis” presented at the
                                             </p>
                                             <ul class="mb-0 ml-4">
@@ -500,10 +534,42 @@
         </div>
     </section>
 
+    <section class="emergency-department-area pb-70">
+        <div class="container">
+            <div class="work-wrap owl-carousel owl-theme">
+                
+                <div class="single-work">
+                    <img src="{{ asset('website/img/associations/1.jpg') }}" alt="Image">
+                </div>
+                
+                <div class="single-work">
+                    <img src="{{ asset('website/img/associations/2.jpg') }}" alt="Image">
+                </div>
+                
+                <div class="single-work">
+                    <img src="{{ asset('website/img/associations/3.jpg') }}" alt="Image">
+                </div>
+                
+                <div class="single-work">
+                    <img src="{{ asset('website/img/associations/4.jpg') }}" alt="Image">
+                </div>
+                
+                <div class="single-work">
+                    <img src="{{ asset('website/img/associations/5.jpg') }}" alt="Image">
+                </div>
+                
+                <div class="single-work">
+                    <img src="{{ asset('website/img/associations/6.jpg') }}" alt="Image">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <section class="make-appointment-area ptb-100">
         <div class="container">
             <div class="make-appointment-content">
-                <h2>Online appointments are now open!</h2>
+                <h2>Video consultations now open!</h2>
                 <a href="javascript::void(0)" class="default-btn">
                     Book An Appointment
                 </a>

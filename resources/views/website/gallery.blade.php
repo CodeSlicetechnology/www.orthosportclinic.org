@@ -27,9 +27,42 @@
 			<div class="row">
 				<div class="col-lg-4 col-md-6">
 					<div class="single-blog">
-						<a target="_blank" href="{{ asset('website/img/gallery/alva.jpg') }}">
-                            <img src="{{ asset('website/img/gallery/alva.jpg') }}" alt="Image">
+						<a target="_blank" href="{{ asset('website/img/gallery/Pic 1.jpg') }}">
+                            <img src="{{ asset('website/img/gallery/Pic 1.jpg') }}" alt="Image">
                         </a>
+                        <div class="blog-content p-3">
+                            <p class="mb-0">Australian orthopaedic association annual meeting, Tasmania 2018</p>
+                        </div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="single-blog">
+						<a target="_blank" href="{{ asset('website/img/gallery/Pic 2.jpg') }}">
+                            <img src="{{ asset('website/img/gallery/Pic 2.jpg') }}" alt="Image">
+                        </a>
+                        <div class="blog-content p-3">
+                            <p class="mb-0">World congress of science and medicine in cricket conference, UK 2019 </p>
+                        </div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="single-blog">
+						<a target="_blank" href="{{ asset('website/img/gallery/Pic 3.jpg') }}">
+                            <img src="{{ asset('website/img/gallery/Pic 3.jpg') }}" alt="Image">
+                        </a>
+                        <div class="blog-content p-3">
+                            <p class="mb-0">British Orthopaedic Association Annual congress, Birmingham 2007</p>
+                        </div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="single-blog">
+						<a target="_blank" href="{{ asset('website/img/gallery/Pic 4.jpg') }}">
+                            <img src="{{ asset('website/img/gallery/Pic 4.jpg') }}" alt="Image">
+                        </a>
+                        <div class="blog-content p-3">
+                            <p class="mb-0">Royal College of surgeons, Edinburgh</p>
+                        </div>
 					</div>
 				</div>
 			</div>
@@ -39,7 +72,7 @@
     <section class="make-appointment-area ptb-100">
         <div class="container">
             <div class="make-appointment-content">
-                <h2>Online appointments are now open!</h2>
+                <h2>Video consultations now open!</h2>
                 <a href="javascript::void(0)" class="default-btn">
                     Book An Appointment
                 </a>

@@ -124,10 +124,10 @@
                             </form>
 
                             <div class="pt-4">
-                                <p>
+                                <p class="text-justify">
                                     <span class="font-weight-bold text-info">Interstate/ International Patients:</span>  We offer world class clinical consults to patients from across the globe. For medical tourists, we recommend an initial videoconsult to discuss your clinical and travel requirements. 
                                 </p>
-                                <p>
+                                <p class="text-justify">
                                     <span class="font-weight-bold text-info">Careers:</span> If you possess a background in healthcare and wish to work for Orthosport Clinic, kindly send us a message.  
                                 </p>
                             </div>
@@ -142,7 +142,7 @@
     <section class="make-appointment-area ptb-100">
         <div class="container">
             <div class="make-appointment-content">
-                <h2>Online appointments are now open!</h2>
+                <h2>Video consultations now open!</h2>
                 <a href="javascript::void(0)" class="default-btn">
                     Book An Appointment
                 </a>
