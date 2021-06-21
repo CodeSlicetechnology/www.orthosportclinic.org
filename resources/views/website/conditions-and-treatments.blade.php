@@ -6,7 +6,7 @@
 
 
 @section('page-content')
-    <div class="page-title-area bg-15">
+    {{-- <div class="page-title-area bg-15">
         <div class="container">
             <div class="page-title-content">
             <h2 class="text-dark">Common orthopaedic conditions & treatments</h2>
@@ -20,9 +20,9 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </div> --}}
 
-    <section class="emergency-department-area pt-100">
+    <section class="emergency-department-area pt-100 mt-30">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-12">
@@ -906,7 +906,7 @@
         </div>
     </section>
 
-    @include('website.associationSection')
+    {{-- @include('website.associationSection') --}}
 
     @include('website.appointmentSection')
 @endsection

@@ -6,7 +6,7 @@
 
 
 @section('page-content')
-    <div class="page-title-area bg-15">
+    {{-- <div class="page-title-area bg-15">
         <div class="container">
             <div class="page-title-content">
             <h2 class="text-dark">Contact Us</h2>
@@ -20,9 +20,9 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </div> --}}
 
-    <section class="contact-info-area">
+    <section class="contact-info-area mt-30">
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-lg-3 p-0">

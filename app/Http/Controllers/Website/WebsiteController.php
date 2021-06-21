@@ -28,14 +28,14 @@ class WebsiteController extends Controller
         $paginate = 0;
         $pageFlag = false;
         $commonProcedures = CommonProcedures::viewCommonProcedures($id, $paginate);
-        $associations = Association::viewAssociation($id, $paginate);
+        // $associations = Association::viewAssociation($id, $paginate);
         $aboutDoctor = AboutDoctor::viewAboutDoctor($id, $pageFlag);
         $homeSectionOne = HomeSectionOne::viewHomeSectionOne($id);
 
         $data = [
             'homeSectionOne' => $homeSectionOne,
             'commonProcedures' => $commonProcedures,
-            'associations' => $associations,
+            // 'associations' => $associations,
             'aboutDoctor' => $aboutDoctor
         ];
         return view('website.landingPage')->with(["page" => "home", "data" => $data]);
@@ -72,11 +72,11 @@ class WebsiteController extends Controller
     {
         $id = "NA";
         $paginate = 0;
-        $associations = Association::viewAssociation($id, $paginate);
+        // $associations = Association::viewAssociation($id, $paginate);
         $conditionsAndTreatments = ConditionsAndTreatments::viewConditionsAndTreatments($id);
         
         $data = [
-            'associations' => $associations,
+            // 'associations' => $associations,
             'conditionsAndTreatments' => $conditionsAndTreatments
         ];
         return view('website.conditions-and-treatments')->with(["page" => "condTrt", "data" => $data]);

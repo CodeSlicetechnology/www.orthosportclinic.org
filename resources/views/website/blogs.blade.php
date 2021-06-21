@@ -6,7 +6,7 @@
 
 
 @section('page-content')
-    <div class="page-title-area bg-15">
+    {{-- <div class="page-title-area bg-15">
         <div class="container">
             <div class="page-title-content">
             <h2 class="text-dark">Blogs</h2>
@@ -20,9 +20,9 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </div> --}}
 
-    <section class="blog-area pt-100 pb-100">
+    <section class="blog-area pt-100 pb-100 mt-30">
 		<div class="container">
 			<p class="text-center">No blogs found</p>
 		</div>

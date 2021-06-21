@@ -37,9 +37,9 @@
                           
                         <div class="row justify-content-center"> 
                             <div class="col-12 text-center">
-                                <h4 class="font-weight-normal">{{ $data['aboutDoctor']->doctorName }}</h4>
-                                <p class="font-10pt mb-2 text-dark">{{ $data['aboutDoctor']->subTitle }}</p>
-                                <span class="font-10pt font-weight-normal text-secondary">
+                                <h4 class="font-weight-bold font-15px">{{ $data['aboutDoctor']->doctorName }}</h4>
+                                {{-- <p class="font-10pt mb-2 text-dark">{{ $data['aboutDoctor']->subTitle }}</p> --}}
+                                <span class="font-10pt font-weight-bold text-secondary">
                                     @foreach ($data['aboutDoctor']->doctorQualification as $key =>$item)
                                         
                                         @if (count($data['aboutDoctor']->doctorQualification)-1 != $key)

@@ -6,7 +6,7 @@
 
 
 @section('page-content')
-    <div class="page-title-area bg-15">
+    {{-- <div class="page-title-area bg-15">
         <div class="container">
             <div class="page-title-content">
             <h2 class="text-dark">Clinical Images</h2>
@@ -20,9 +20,9 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </div> --}}
 
-    <section class="blog-area pt-100 pb-70">
+    <section class="blog-area pt-100 pb-70 mt-30">
 		<div class="container">
 			<div class="row">
 				@foreach ($data['clinicalImages'] as $item)
