@@ -7299,3 +7299,7 @@ textarea.form-control {
     font-weight: normal !important;
     color: #2870b4 !important;
 }
+
+.mt-30 {
+    margin-top: 68px !important;
+}
