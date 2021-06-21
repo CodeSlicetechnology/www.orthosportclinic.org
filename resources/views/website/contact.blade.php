@@ -70,12 +70,34 @@
                 <div class="col-lg-12">
                     <div class="contact-wrap contact-pages mb-0">
                         <div class="contact-form">
-                            <form id="contactForm">
+                            @if(session()->get('success'))
+                                <div class="alert alert-success" role="alert">
+                                    Well done! {{ session()->get('success') }} 
+                                </div>
+                            @endif
+
+                            @if(session()->get('error'))
+                                <div class="alert alert-danger" role="alert">
+                                    Oh snap! {{ session()->get('error') }} 
+                                </div>
+                            @endif
+
+                            @if ($errors->any())
+                                @foreach ($errors->all() as $error)
+                                <div class="alert alert-danger" role="alert">
+                                    Oh snap! {{ $error }} 
+                                </div>
+                                @endforeach
+                            @endif
+
+                            
+                            <form id="contactForm" method="POST" action="{{ route('contact') }}">
+                                {!! csrf_field() !!}
                                 <div class="row">
                                     <div class="col-lg-6 col-sm-6">
                                         <label>Name</label>
                                         <div class="form-group">
-                                            <input type="text" name="name" id="name" class="form-control" required
+                                            <input type="text" name="name" id="name" class="form-control" value="{{ old('name') }}" required
                                                 data-error="Please enter your name" placeholder="Your Name">
                                             <div class="help-block with-errors"></div>
                                         </div>
@@ -83,7 +105,7 @@
                                     <div class="col-lg-6 col-sm-6">
                                         <label>Email</label>
                                         <div class="form-group">
-                                            <input type="email" name="email" id="email" class="form-control" required
+                                            <input type="email" name="email" id="email" class="form-control" value="{{ old('email') }}" required
                                                 data-error="Please enter your email" placeholder="Your Email">
                                             <div class="help-block with-errors"></div>
                                         </div>
@@ -91,7 +113,7 @@
                                     <div class="col-lg-6 col-sm-6">
                                         <label>Phone</label>
                                         <div class="form-group">
-                                            <input type="text" name="phone_number" id="phone_number" required
+                                            <input type="text" name="phone_number" id="phone_number" value="{{ old('phone_number') }}" required
                                                 data-error="Please enter your number" class="form-control"
                                                 placeholder="Your Phone">
                                             <div class="help-block with-errors"></div>
@@ -100,7 +122,7 @@
                                     <div class="col-lg-6 col-sm-6">
                                         <label>Subject</label>
                                         <div class="form-group">
-                                            <input type="text" name="msg_subject" id="msg_subject" class="form-control"
+                                            <input type="text" name="msg_subject" id="msg_subject" value="{{ old('msg_subject') }}" class="form-control"
                                                 required data-error="Please enter your subject"
                                                 placeholder="Your Subject">
                                             <div class="help-block with-errors"></div>
@@ -111,7 +133,7 @@
                                         <div class="form-group">
                                             <textarea name="message" class="form-control textarea-hight" id="message"
                                                 cols="30" rows="5" required data-error="Write your message"
-                                                placeholder="Your Message"></textarea>
+                                                placeholder="Your Message">{{ old('message') }}</textarea>
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
@@ -139,20 +161,11 @@
         </div>
     </section>
 
-    <section class="make-appointment-area ptb-100">
-        <div class="container">
-            <div class="make-appointment-content">
-                <h2>Video consultations now open!</h2>
-                <a href="javascript::void(0)" class="default-btn">
-                    Book An Appointment
-                </a>
-            </div>
-        </div>
-    </section>
+    @include('website.appointmentSection')
 @endsection
 
 
 @section('my-script')
-    <script src="{{ asset('website/js/form-validator.min.js') }}"></script>
-    <script src="{{ asset('website/js/contact-form-script.js') }}"></script>
+    {{-- <script src="{{ asset('website/js/form-validator.min.js') }}"></script>
+    <script src="{{ asset('website/js/contact-form-script.js') }}"></script> --}}
 @endsection

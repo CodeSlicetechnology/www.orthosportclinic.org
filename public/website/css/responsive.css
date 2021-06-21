@@ -2683,7 +2683,7 @@
 
     .mean-container a.meanmenu-reveal {
         padding: 36px 25px 0 0;
-        color: #fff
+        color: #313437
     }
 
     .mean-container a.meanmenu-reveal span {
@@ -2698,7 +2698,7 @@
     }
 
     .mobile-nav.mean-container .mean-nav {
-        margin-top: 70px
+        margin-top: 93px
     }
 
     .mobile-nav.mean-container .mean-nav ul li a:hover {
@@ -2718,6 +2718,6 @@
     }
 
     .mobile-nav nav .navbar-nav {
-        height: 325px
+        height: 378px
     }
 }

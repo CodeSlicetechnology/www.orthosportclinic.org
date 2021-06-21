@@ -54,7 +54,7 @@
     @yield('my-script')
 
     <script>
-        document.addEventListener('contextmenu', event => event.preventDefault());
+        // document.addEventListener('contextmenu', event => event.preventDefault());
     </script>
     <!-- End custom script -->
 </body>

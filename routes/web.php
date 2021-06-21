@@ -18,6 +18,7 @@ Route::get('gallery', 'Website\WebsiteController@gallery')->name('gallery');
 Route::get('clinical-images', 'Website\WebsiteController@clinicalImages')->name('clinical-images');
 Route::get('blogs', 'Website\WebsiteController@blogs')->name('blogs');
 Route::get('contact', 'Website\WebsiteController@contact')->name('contact');
+Route::post('contact', 'Website\WebsiteController@saveContact')->name('contact');
 
 Auth::routes();
 
@@ -25,8 +26,60 @@ Route::get('register', function () {
     return abort(404);
 })->name('register');
 
-Route::get('login', function () {
-    return abort(404);
-})->name('login');
+// Route::get('login', function () {
+//     return abort(404);
+// })->name('login');
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+// routes for admin login
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/home', 'HomeController@index')->name('/home');
+    Route::post('update-banner', 'HomeController@bannerUpdate')->name('update-banner');
+    Route::get('about-landing', 'HomeController@aboutLanding')->name('about-landing');
+    Route::post('update-landing-about', 'HomeController@landingAboutUpdate')->name('update-landing-about');
+    Route::get('common-procedures', 'HomeController@commonProcedures')->name('common-procedures');
+    Route::get('common-procedures', 'HomeController@commonProcedures')->name('common-procedures');
+    Route::post('common-procedures', 'HomeController@commonProceduresUpdate')->name('common-procedures');
+    Route::get('common-procedures/{id}', 'HomeController@commonProceduresEdit');
+    
+    Route::get('conditions-treatments-list', 'HomeController@conditionsTreatmentsList')->name('conditions-treatments-list');
+    Route::get('conditions-treatments-list/{id}', 'HomeController@conditionsTreatmentsEdit');
+    Route::post('conditions-treatments-list', 'HomeController@conditionsTreatmentsUpdate')->name('conditions-treatments-list');
+
+    Route::get('about-first-section', 'HomeController@aboutFirstSection')->name('about-first-section');
+    Route::post('about-first-section', 'HomeController@aboutFirstSectionUpdate')->name('about-first-section');
+    Route::get('about-second-section', 'HomeController@aboutSecondSection')->name('about-second-section');
+    Route::get('about-second-section/{id}', 'HomeController@aboutSecondSectionEdit');
+    Route::post('about-second-section', 'HomeController@aboutSecondSectionUpdate')->name('about-second-section');
+    
+    Route::get('association-images', 'HomeController@associationImages')->name('association-images');
+    Route::post('upload-association-images', 'HomeController@associationImageUpload')->name('upload-association-images');
+    Route::get('delete-association-images/{id}', 'HomeController@associationImageDelete');
+
+    Route::get('rp-screenshots', 'HomeController@rpScreenshots')->name('rp-screenshots');
+    Route::post('upload-rp-screenshots', 'HomeController@rpScreenshotsUpload')->name('upload-rp-screenshots');
+    Route::get('delete-rp-screenshots/{id}', 'HomeController@rpScreenshotsDelete');
+
+
+    Route::get('clinical-images', 'HomeController@clinicalImages')->name('clinical-images');
+    Route::post('upload-clinical-images', 'HomeController@clinicalImagesUpload')->name('upload-clinical-images');
+    Route::get('delete-clinical-images/{id}', 'HomeController@clinicalImagesDelete');
+
+    Route::get('gallery-images', 'HomeController@galleryImages')->name('gallery-images');
+    Route::post('upload-gallery-images', 'HomeController@galleryImagesUpload')->name('upload-gallery-images');
+    Route::get('delete-gallery-images/{id}', 'HomeController@galleryImagesDelete');
+
+    
+    Route::get('blogs-list', 'HomeController@blogsList')->name('blogs-list');
+    Route::get('blogs-add', 'HomeController@newBlog')->name('blogs-add');
+    Route::get('blogs-edit/{id}', 'HomeController@blogsEdit');
+    Route::post('save-blogs', 'HomeController@blogsSave')->name('save-blogs');
+    Route::post('update-blogs', 'HomeController@blogsUpdate')->name('update-blogs');
+    Route::get('blogs-delete/{id}', 'HomeController@blogsDelete');
+
+    // change password
+    Route::get('/change-password','HomeController@showChangePasswordForm')->name('change-password');
+    Route::post('/changePassword','HomeController@changePassword')->name('changePassword');
+});

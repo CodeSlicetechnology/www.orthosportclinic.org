@@ -25,60 +25,25 @@
     <section class="blog-area pt-100 pb-70">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-4 col-md-6">
-					<div class="single-blog">
-						<a target="_blank" href="{{ asset('website/img/gallery/Pic 1.jpg') }}">
-                            <img src="{{ asset('website/img/gallery/Pic 1.jpg') }}" alt="Image">
-                        </a>
-                        <div class="blog-content p-3">
-                            <p class="mb-0">Australian orthopaedic association annual meeting, Tasmania 2018</p>
+				@foreach ($data['galleryImages'] as $item)
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-blog">
+                            <a target="_blank" href="{{ asset('./'.$item->image_path) }}">
+                                <img src="{{ asset('./'.$item->image_path) }}" alt="Image">
+                            </a>
+                            @if ($item->description != null)
+                                <div class="blog-content p-3">
+                                    <p class="mb-0">{{ $item->description }}</p>
+                                </div>
+                            @endif                            
                         </div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="single-blog">
-						<a target="_blank" href="{{ asset('website/img/gallery/Pic 2.jpg') }}">
-                            <img src="{{ asset('website/img/gallery/Pic 2.jpg') }}" alt="Image">
-                        </a>
-                        <div class="blog-content p-3">
-                            <p class="mb-0">World congress of science and medicine in cricket conference, UK 2019 </p>
-                        </div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="single-blog">
-						<a target="_blank" href="{{ asset('website/img/gallery/Pic 3.jpg') }}">
-                            <img src="{{ asset('website/img/gallery/Pic 3.jpg') }}" alt="Image">
-                        </a>
-                        <div class="blog-content p-3">
-                            <p class="mb-0">British Orthopaedic Association Annual congress, Birmingham 2007</p>
-                        </div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="single-blog">
-						<a target="_blank" href="{{ asset('website/img/gallery/Pic 4.jpg') }}">
-                            <img src="{{ asset('website/img/gallery/Pic 4.jpg') }}" alt="Image">
-                        </a>
-                        <div class="blog-content p-3">
-                            <p class="mb-0">Royal College of surgeons, Edinburgh</p>
-                        </div>
-					</div>
-				</div>
+                    </div>
+                @endforeach
 			</div>
 		</div>
 	</section>
 
-    <section class="make-appointment-area ptb-100">
-        <div class="container">
-            <div class="make-appointment-content">
-                <h2>Video consultations now open!</h2>
-                <a href="javascript::void(0)" class="default-btn">
-                    Book An Appointment
-                </a>
-            </div>
-        </div>
-    </section>
+    @include('website.appointmentSection')
 @endsection
 
 

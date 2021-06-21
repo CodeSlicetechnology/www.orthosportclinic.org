@@ -25,146 +25,25 @@
     <section class="blog-area pt-100 pb-70">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-4 col-md-6">
-					<div class="single-blog">
-						<a target="_blank" href="{{ asset('website/img/clinical-images/1.jpg') }}">
-                            <img src="{{ asset('website/img/clinical-images/1.jpg') }}" alt="Image">
-                        </a>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="single-blog">
-						<a target="_blank" href="{{ asset('website/img/clinical-images/2.jpg') }}">
-                            <img src="{{ asset('website/img/clinical-images/2.jpg') }}" alt="Image">
-                        </a>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="single-blog">
-						<a target="_blank" href="{{ asset('website/img/clinical-images/3.jpg') }}">
-                            <img src="{{ asset('website/img/clinical-images/3.jpg') }}" alt="Image">
-                        </a>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="single-blog">
-						<a target="_blank" href="{{ asset('website/img/clinical-images/4.jpg') }}">
-                            <img src="{{ asset('website/img/clinical-images/4.jpg') }}" alt="Image">
-                        </a>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="single-blog">
-						<a target="_blank" href="{{ asset('website/img/clinical-images/5.jpg') }}">
-                            <img src="{{ asset('website/img/clinical-images/5.jpg') }}" alt="Image">
-                        </a>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="single-blog">
-						<a target="_blank" href="{{ asset('website/img/clinical-images/6.jpg') }}">
-                            <img src="{{ asset('website/img/clinical-images/6.jpg') }}" alt="Image">
-                        </a>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="single-blog">
-						<a target="_blank" href="{{ asset('website/img/clinical-images/7.jpg') }}">
-                            <img src="{{ asset('website/img/clinical-images/7.jpg') }}" alt="Image">
-                        </a>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="single-blog">
-						<a target="_blank" href="{{ asset('website/img/clinical-images/8.jpg') }}">
-                            <img src="{{ asset('website/img/clinical-images/8.jpg') }}" alt="Image">
-                        </a>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="single-blog">
-						<a target="_blank" href="{{ asset('website/img/clinical-images/9.jpg') }}">
-                            <img src="{{ asset('website/img/clinical-images/9.jpg') }}" alt="Image">
-                        </a>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="single-blog">
-						<a target="_blank" href="{{ asset('website/img/clinical-images/10.jpg') }}">
-                            <img src="{{ asset('website/img/clinical-images/10.jpg') }}" alt="Image">
-                        </a>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="single-blog">
-						<a target="_blank" href="{{ asset('website/img/clinical-images/11.jpg') }}">
-                            <img src="{{ asset('website/img/clinical-images/11.jpg') }}" alt="Image">
-                        </a>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="single-blog">
-						<a target="_blank" href="{{ asset('website/img/clinical-images/12.jpg') }}">
-                            <img src="{{ asset('website/img/clinical-images/12.jpg') }}" alt="Image">
-                        </a>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="single-blog">
-						<a target="_blank" href="{{ asset('website/img/clinical-images/13.jpg') }}">
-                            <img src="{{ asset('website/img/clinical-images/13.jpg') }}" alt="Image">
-                        </a>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="single-blog">
-						<a target="_blank" href="{{ asset('website/img/clinical-images/14.jpg') }}">
-                            <img src="{{ asset('website/img/clinical-images/14.jpg') }}" alt="Image">
-                        </a>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="single-blog">
-						<a target="_blank" href="{{ asset('website/img/clinical-images/15.jpg') }}">
-                            <img src="{{ asset('website/img/clinical-images/15.jpg') }}" alt="Image">
-                        </a>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="single-blog">
-						<a target="_blank" href="{{ asset('website/img/clinical-images/16.jpg') }}">
-                            <img src="{{ asset('website/img/clinical-images/16.jpg') }}" alt="Image">
-                        </a>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="single-blog">
-						<a target="_blank" href="{{ asset('website/img/clinical-images/17.jpg') }}">
-                            <img src="{{ asset('website/img/clinical-images/17.jpg') }}" alt="Image">
-                        </a>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="single-blog">
-						<a target="_blank" href="{{ asset('website/img/clinical-images/18.jpg') }}">
-                            <img src="{{ asset('website/img/clinical-images/18.jpg') }}" alt="Image">
-                        </a>
-					</div>
-				</div>
+				@foreach ($data['clinicalImages'] as $item)
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-blog">
+                            <a target="_blank" href="{{ asset('./'.$item->image_path) }}">
+                                <img src="{{ asset('./'.$item->image_path) }}" alt="Image">
+                            </a>
+                            @if ($item->description != null)
+                                <div class="blog-content p-3">
+                                    <p class="mb-0">{{ $item->description }}</p>
+                                </div>
+                            @endif                            
+                        </div>
+                    </div>
+                @endforeach
 			</div>
 		</div>
 	</section>
 
-    <section class="make-appointment-area ptb-100">
-        <div class="container">
-            <div class="make-appointment-content">
-                <h2>Video consultations now open!</h2>
-                <a href="javascript::void(0)" class="default-btn">
-                    Book An Appointment
-                </a>
-            </div>
-        </div>
-    </section>
+    @include('website.appointmentSection')
 @endsection
 
 

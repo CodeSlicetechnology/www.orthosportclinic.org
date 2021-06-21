@@ -22,21 +22,30 @@
         </div>
     </div>
 
-    <section class="emergency-department-area ptb-100">
+    <section class="emergency-department-area pt-100">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-12">
                     <div class="faq-accordion pt-3">
                         <ul class="accordion">
-                            <li class="accordion-item">
+                            @foreach ($data['conditionsAndTreatments'] as $item)
+                                <li class="accordion-item">
+                                    <a class="accordion-title" href="javascript:void(0)">
+                                        <i class='bx bx-chevron-down'></i>
+                                        <h5 class="text-info font-weight-normal mb-2">
+                                            {{ $item->title }}
+                                        </h5> 
+                                    </a>
+                                    <div class="accordion-content rmv-mb-p emergency-contents">
+                                        {!! $item->description !!}
+                                    </div>
+                                </li>
+                            @endforeach
+                            {{-- <li class="accordion-item">
                                 <a class="accordion-title" href="javascript:void(0)">
                                     <i class='bx bx-chevron-down'></i>
                                     <h5 class="text-info font-weight-normal mb-2">
                                         Arthritis
-                                        <br/>
-                                        <span class="font-10pt text-secondary font-weight-normal font-italic">
-                                            (This information is only a guideline; kindly consult a specialist)
-                                        </span>
                                     </h5> 
                                 </a>
                                 <div class="accordion-content">
@@ -83,10 +92,6 @@
                                     <i class='bx bx-chevron-down'></i>
                                     <h5 class="text-info font-weight-normal mb-2">
                                         Knee Injuries – Cartilage, Meniscus, Ligaments and Kneecap
-                                        <br/>
-                                        <span class="font-10pt text-secondary font-weight-normal font-italic">
-                                            (This information is only a guideline; kindly consult a specialist)
-                                        </span>
                                     </h5> 
                                 </a>
                                 <div class="accordion-content">
@@ -232,10 +237,6 @@
                                     <i class='bx bx-chevron-down'></i>
                                     <h5 class="text-info font-weight-normal mb-2">
                                         Knee – Osteotomy & Joint Replacement 
-                                        <br/>
-                                        <span class="font-10pt text-secondary font-weight-normal font-italic">
-                                            (This information is only a guideline; kindly consult a specialist)
-                                        </span>
                                     </h5> 
                                 </a>
                                 <div class="accordion-content">
@@ -361,10 +362,6 @@
                                     <i class='bx bx-chevron-down'></i>
                                     <h5 class="text-info font-weight-normal mb-2">
                                         HIP JOINT-Preservation and Replacement 
-                                        <br/>
-                                        <span class="font-10pt text-secondary font-weight-normal font-italic">
-                                            (This information is only a guideline; kindly consult a specialist)
-                                        </span>
                                     </h5> 
                                 </a>
                                 <div class="accordion-content">
@@ -550,10 +547,6 @@
                                     <i class='bx bx-chevron-down'></i>
                                     <h5 class="text-info font-weight-normal mb-2">
                                         Shoulder Joint
-                                        <br/>
-                                        <span class="font-10pt text-secondary font-weight-normal font-italic">
-                                            (This information is only a guideline; kindly consult a specialist)
-                                        </span>
                                     </h5> 
                                 </a>
                                 <div class="accordion-content">
@@ -645,10 +638,6 @@
                                     <i class='bx bx-chevron-down'></i>
                                     <h5 class="text-info font-weight-normal mb-2">
                                         Elbow, Wrist and Hand
-                                        <br/>
-                                        <span class="font-10pt text-secondary font-weight-normal font-italic">
-                                            (This information is only a guideline; kindly consult a specialist)
-                                        </span>
                                     </h5> 
                                 </a>
                                 <div class="accordion-content">
@@ -749,10 +738,6 @@
                                     <i class='bx bx-chevron-down'></i>
                                     <h5 class="text-info font-weight-normal mb-2">
                                         Foot and Ankle
-                                        <br/>
-                                        <span class="font-10pt text-secondary font-weight-normal font-italic">
-                                            (This information is only a guideline; kindly consult a specialist)
-                                        </span>
                                     </h5> 
                                 </a>
                                 <div class="accordion-content">
@@ -853,10 +838,6 @@
                                     <i class='bx bx-chevron-down'></i>
                                     <h5 class="text-info font-weight-normal mb-2">
                                         Spine
-                                        <br/>
-                                        <span class="font-10pt text-secondary font-weight-normal font-italic">
-                                            (This information is only a guideline; kindly consult a specialist)
-                                        </span>
                                     </h5> 
                                 </a>
                                 <div class="accordion-content">
@@ -894,10 +875,6 @@
                                     <i class='bx bx-chevron-down'></i>
                                     <h5 class="text-info font-weight-normal mb-2">
                                         Covid
-                                        <br/>
-                                        <span class="font-10pt text-secondary font-weight-normal font-italic">
-                                            (This information is only a guideline; kindly consult a specialist)
-                                        </span>
                                     </h5> 
                                 </a>
                                 <div class="accordion-content">
@@ -918,24 +895,20 @@
                                         </div>
                                     </div>                                    
                                 </div>
-                            </li>
+                            </li> --}}
                         </ul>
-                    </div>            
+                    </div>   
+                    <p class="font-12pt mt-4 text-right font-weight-bold font-italic">
+                        (This information is only a guideline; kindly consult a specialist)
+                    </p>         
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="make-appointment-area ptb-100">
-        <div class="container">
-            <div class="make-appointment-content">
-                <h2>Video consultations now open!</h2>
-                <a href="javascript::void(0)" class="default-btn">
-                    Book An Appointment
-                </a>
-            </div>
-        </div>
-    </section>
+    @include('website.associationSection')
+
+    @include('website.appointmentSection')
 @endsection
 
 

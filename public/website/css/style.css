@@ -8,10 +8,10 @@ body {
     line-height: 1.8;
     font-family: lato, sans-serif;
     color: #525252;
-      -webkit-user-select: none;
+      /* -webkit-user-select: none;
       -moz-user-select: -moz-none;
       -ms-user-select: none;
-      user-select: none;
+      user-select: none; */
 }
 
 a {
@@ -5325,7 +5325,8 @@ textarea.form-control {
 }
 
 .emergency-contents ul {
-    margin-bottom: 35px
+    margin-bottom: 15px;
+    margin-left: 16px;
 }
 
 .emergency-contents ul li {
@@ -7288,4 +7289,13 @@ textarea.form-control {
 
 .font-12pt {
     font-size: 12pt !important;
+}
+
+.rmv-mb-p p {
+    margin-bottom: 0 !important;
+}
+
+.h3-blue h3 {
+    font-weight: normal !important;
+    color: #2870b4 !important;
 }
