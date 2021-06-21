@@ -22,7 +22,7 @@
         </div>
     </div> --}}
 
-    <section class="emergency-department-area pt-100 mt-30">
+    <section class="emergency-department-area pt-100 mt-68px">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-12 doctors-detailss">

@@ -22,7 +22,7 @@
         </div>
     </div> --}}
 
-    <section class="blog-area pt-100 pb-100 mt-30">
+    <section class="blog-area pt-100 pb-100 mt-68px">
 		<div class="container">
 			<p class="text-center">No blogs found</p>
 		</div>

@@ -169,7 +169,7 @@ textarea.form-control {
     padding-bottom: 130px
 }
 
-.mt-30 {
+.mt-68px {
     margin-top: 30px
 }
 
@@ -5385,7 +5385,7 @@ textarea.form-control {
     position: relative;
     max-width: 650px;
     margin-left: auto;
-    top: 55px
+    top: 5px
 }
 
 .main-banner-area-four .banner-text span {
@@ -7300,10 +7300,14 @@ textarea.form-control {
     color: #2870b4 !important;
 }
 
-.mt-30 {
+.mt-68px {
     margin-top: 68px !important;
 }
 
 .font-15px {
     font-size: 15px !important;
+}
+
+.mt-168px {
+    margin-top: 168px !important;
 }

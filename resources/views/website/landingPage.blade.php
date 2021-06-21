@@ -10,12 +10,12 @@
         <div class="d-table">
             <div class="d-table-cell">
                 <div class="container-fluid">
-                    <div class="row">
+                    <div class="row align-items-start">
                         <div class="col-lg-7">
                             <div class="banner-text">
-                                <h1 class="wow fadeInUp font-weight-normal mb-2" data-wow-delay=".4s">{{ $data['homeSectionOne']->main_title }}</h1>
-                                <h3 class="wow fadeInUp font-weight-normal mb-2 text-warning" data-wow-delay=".6s">{{ $data['homeSectionOne']->sub_title_1 }}</h3>
-                                <p class="wow fadeInUp mt-3 mb-2 text-secondary font-10pt" data-wow-delay=".8s">{{ $data['homeSectionOne']->sub_title_2 }}</p>
+                                <h2 class="wow fadeInUp font-weight-normal mb-4 text-warning" data-wow-delay=".4s">{{ $data['homeSectionOne']->main_title }}</h2>
+                                <h3 class="wow fadeInUp font-weight-bold mb-2 text-secondary font-12pt" data-wow-delay=".6s">{{ $data['homeSectionOne']->sub_title_1 }}</h3>
+                                <p class="wow fadeInUp font-weight-bold mt-3 text-secondary mb-2 font-12pt" data-wow-delay=".8s">{{ $data['homeSectionOne']->sub_title_2 }}</p>
                                 <div class="banner-btn wow fadeInUp" data-wow-delay=".9s">
                                     <a href="https://docon.co.in/" class="default-btn">
                                         Book An Appointment
