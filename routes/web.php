@@ -63,7 +63,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('delete-rp-screenshots/{id}', 'HomeController@rpScreenshotsDelete');
 
 
-    Route::get('clinical-images', 'HomeController@clinicalImages')->name('clinical-images');
+    Route::get('view-clinical-images', 'HomeController@clinicalImages')->name('view-clinical-images');
     Route::post('upload-clinical-images', 'HomeController@clinicalImagesUpload')->name('upload-clinical-images');
     Route::get('delete-clinical-images/{id}', 'HomeController@clinicalImagesDelete');
 

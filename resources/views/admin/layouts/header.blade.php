@@ -87,7 +87,7 @@
                                 <a href="{{ route('rp-screenshots') }}" class="dropdown-link">Research & Publication Screenshots</a>
                             </li>
                             <li class="dropdown-item">
-                                <a href="{{ route('clinical-images') }}" class="dropdown-link">Clinical</a>
+                                <a href="{{ route('view-clinical-images') }}" class="dropdown-link">Clinical</a>
                             </li>
                             <li class="dropdown-item">
                                 <a href="{{ route('gallery-images') }}" class="dropdown-link">Gallery</a>
