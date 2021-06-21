@@ -28,22 +28,22 @@
                 <div class="col-lg-4 col-md-3 col-sm-6">
                     <ul class="header-content-right">
                         <li>
-                            <a href="#">
+                            <a target="_blank" href="https://m.facebook.com/107515764727481/">
                                 <i class="bx bxl-facebook"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a target="_blank" href="https://www.youtube.com/channel/UCTCny3Z2uc0cEupMBcmVNiQ">
                                 <i class="bx bxl-youtube"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a target="_blank" href="#">
                                 <i class="bx bxl-instagram"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a target="_blank" href="https://twitter.com/ORTHOSPORTCLINC">
                                 <i class="bx bxl-twitter"></i>
                             </a>
                         </li>
