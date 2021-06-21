@@ -56,14 +56,14 @@
         <div class="navbar-area">
             <div class="mobile-nav">
                 <a href="{{ route('/') }}" class="logo">
-                    <img src="{{ asset('website/img/logo.png') }}" alt="Logo">
+                    <img src="{{ asset('website/img/logo.png') }}??v=1.0" alt="Logo">
                 </a>
             </div>
             <div class="main-nav">
                 <nav class="navbar navbar-expand-md navbar-light">
                     <div class="container">
                         <a class="navbar-brand" href="{{ route('/') }}">
-                            <img src="{{ asset('website/img/logo.png') }}" alt="Logo">
+                            <img src="{{ asset('website/img/logo.png') }}??v=1.0" alt="Logo">
                         </a>
                         <div class="collapse navbar-collapse mean-menu justify-content-end" id="navbarSupportedContent">
                             <ul class="navbar-nav">
