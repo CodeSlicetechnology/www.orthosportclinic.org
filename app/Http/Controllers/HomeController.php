@@ -103,7 +103,6 @@ class HomeController extends Controller
         
         $request->validate([
             'doctorName'=>'required|max:100',
-            'subTitle'=>'required|max:100',
             'landing_desc'=>'required',
             'imagePath1' => 'mimes:jpeg,jpg,png|max:'.$maxSize
         ]);
@@ -125,7 +124,6 @@ class HomeController extends Controller
         }
 
         $data['doctorName'] = $request->get('doctorName');
-        $data['subTitle'] = $request->get('subTitle');
         $data['landing_desc'] = $request->get('landing_desc');
         $data['updated_by'] = Auth::user()->id;   
         
@@ -248,7 +246,6 @@ class HomeController extends Controller
         
         $request->validate([
             'doctorName'=>'required|max:100',
-            'subTitle'=>'required|max:100',
             'landing_desc'=>'required',
             'imagePath1' => 'mimes:jpeg,jpg,png|max:'.$maxSize
         ]);
@@ -270,7 +267,6 @@ class HomeController extends Controller
         }
 
         $data['doctorName'] = $request->get('doctorName');
-        $data['subTitle'] = $request->get('subTitle');
         $data['updated_by'] = Auth::user()->id;   
         
         if ($file_path != "") {            

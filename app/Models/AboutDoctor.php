@@ -21,7 +21,7 @@ class AboutDoctor extends Model
     /**
      * @var array
     */
-    protected $fillable = ['doctorName', 'subTitle', 'landing_desc', 'created_by', 'updated_by' ];
+    protected $fillable = ['doctorName', 'landing_desc', 'created_by', 'updated_by' ];
 
 
     public static function addAboutDoctor($data)
@@ -29,7 +29,6 @@ class AboutDoctor extends Model
         $result = self::Create(
             [
                 'doctorName'    => $data['doctorName'],
-                'subTitle'      => $data['subTitle'],
                 'landing_desc'  => $data['landing_desc'],
                 'created_by'    => $data['userId'],
                 'updated_by'    => $data['userId']
@@ -47,7 +46,7 @@ class AboutDoctor extends Model
 
     
     public static function viewAboutDoctor($id, $pageFlag) {
-        $data = AboutDoctor::select('id', 'doctorName', 'subTitle', 'landing_desc')
+        $data = AboutDoctor::select('id', 'doctorName', 'landing_desc')
             ->with('doctorQualification')
             ->with('doctorImages');
 

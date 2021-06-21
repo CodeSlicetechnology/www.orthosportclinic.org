@@ -22,7 +22,7 @@
         </div>
     </div> --}}
 
-    <section class="blog-area pt-100 pb-70 mt-68px">
+    <section class="blog-area pb-70 pt-100 top-first-section">
 		<div class="container">
 			<div class="row">
 				@foreach ($data['clinicalImages'] as $item)

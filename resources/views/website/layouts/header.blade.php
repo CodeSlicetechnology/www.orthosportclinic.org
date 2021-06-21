@@ -38,7 +38,7 @@
                             </a>
                         </li>
                         <li>
-                            <a target="_blank" href="#">
+                            <a target="_blank" href="https://www.instagram.com/orthosportclinic.india/">
                                 <i class="bx bxl-instagram"></i>
                             </a>
                         </li>

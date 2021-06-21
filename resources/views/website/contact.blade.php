@@ -22,7 +22,7 @@
         </div>
     </div> --}}
 
-    <section class="contact-info-area mt-168px">
+    <section class="contact-info-area pt-100 top-first-section">
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-lg-3 p-0">

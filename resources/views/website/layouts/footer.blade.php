@@ -1,7 +1,8 @@
 <footer class="footer-bottom-area">
     <div class="container">
         <div class="copy-right">
-            <p>Copyright @ {{ date('Y') }} Orthosport Clinic<sup>TM</sup> | Designed by <a class="text-info" href="https://codeslice.tech/" target="blank">Codeslice IT Solutions</a></p>
+            <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © {{ date('Y') }}
+            <a target="_blank" href="{{ route('/') }}">Orthosport Clinic<sup>TM</sup></a>. All rights reserved.</span>
         </div>
     </div>
 </footer>

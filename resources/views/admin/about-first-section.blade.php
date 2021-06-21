@@ -39,10 +39,6 @@
                     </div>
                     
                     <div class="form-group">
-                        <input id="subTitle" type="text" class="form-control" maxlength="100" value="{{ $aboutDoctor->subTitle }}" placeholder="Sub Title 1" name="subTitle" required>              
-                    </div>
-                    
-                    <div class="form-group">
                         <textarea id="landing_desc" class="form-control" name="landing_desc" required>{{ $aboutDoctor->aboutSectionOne->description }}</textarea>
                     </div>
                     

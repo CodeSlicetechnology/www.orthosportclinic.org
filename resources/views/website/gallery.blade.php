@@ -6,23 +6,8 @@
 
 
 @section('page-content')
-    {{-- <div class="page-title-area bg-15">
-        <div class="container">
-            <div class="page-title-content">
-            <h2 class="text-dark">Gallery</h2>
-                <ul>
-                    <li>
-                        <a class="text-secondary" href="{{ route('/') }}">
-                        Home
-                        </a>
-                    </li>
-                    <li class="active">Gallery</li>
-                </ul>
-            </div>
-        </div>
-    </div> --}}
 
-    <section class="blog-area pt-100 pb-70 mt-68px">
+    <section class="blog-area pb-70 pt-100 top-first-section">
 		<div class="container">
 			<div class="row">
 				@foreach ($data['galleryImages'] as $item)

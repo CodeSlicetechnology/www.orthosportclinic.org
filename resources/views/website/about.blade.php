@@ -22,11 +22,11 @@
         </div>
     </div> --}}
 
-    <section class="emergency-department-area pt-100 mt-68px">
+    <section class="emergency-department-area pt-100 top-first-section">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-12 doctors-detailss">
-                    <div class="doctors-history">
+                    <div class="doctors-history mt-0">
                         <div class="row justify-content-center">                            
                             <div class="col-sm-12 col-md-2 col-lg-2">
                                 <div class="assessments-img pb-3">
@@ -38,7 +38,6 @@
                         <div class="row justify-content-center"> 
                             <div class="col-12 text-center">
                                 <h4 class="font-weight-bold font-15px">{{ $data['aboutDoctor']->doctorName }}</h4>
-                                {{-- <p class="font-10pt mb-2 text-dark">{{ $data['aboutDoctor']->subTitle }}</p> --}}
                                 <span class="font-10pt font-weight-bold text-secondary">
                                     @foreach ($data['aboutDoctor']->doctorQualification as $key =>$item)
                                         

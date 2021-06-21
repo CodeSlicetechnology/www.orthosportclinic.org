@@ -169,10 +169,6 @@ textarea.form-control {
     padding-bottom: 130px
 }
 
-.mt-68px {
-    margin-top: 30px
-}
-
 .mb-30 {
     margin-bottom: 30px
 }
@@ -7300,14 +7296,15 @@ textarea.form-control {
     color: #2870b4 !important;
 }
 
-.mt-68px {
-    margin-top: 68px !important;
-}
-
 .font-15px {
     font-size: 15px !important;
 }
 
 .mt-168px {
     margin-top: 168px !important;
+}
+
+.top-first-section {
+    top: 95px;
+    position: relative;
 }
