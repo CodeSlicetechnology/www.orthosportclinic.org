@@ -20,8 +20,8 @@
     <link rel="stylesheet" href="{{ asset('website/css/boxicons.min.css') }}">
     <link rel="stylesheet" href="{{ asset('website/css/flaticon.css') }}">
     <link rel="stylesheet" href="{{ asset('website/css/meanmenu.css') }}">
-    <link rel="stylesheet" href="{{ asset('website/css/style.css?v=1.5') }}">
-    <link rel="stylesheet" href="{{ asset('website/css/responsive.css?v=1.5') }}">
+    <link rel="stylesheet" href="{{ asset('website/css/style.css?v=1.6') }}">
+    <link rel="stylesheet" href="{{ asset('website/css/responsive.css?v=1.6') }}">
 
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('website/img/favicon_io/apple-touch-icon.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('website/img/favicon_io/favicon-32x32.png') }}">
