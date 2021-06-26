@@ -22,7 +22,7 @@
         </div>
     </div> --}}
 
-    <section class="main-contact-area contact ptb-100 top-first-section">
+    <section class="main-contact-area contact ptb-1b00 top-first-section">
         <div class="container">            
             <div class="contact-wrap contact-pages mb-0">
                 <div class="contact-form">
@@ -144,7 +144,7 @@
                                 <span class="font-weight-bold text-info">Interstate/ International Patients:</span>  We offer world class clinical consults to patients from across the globe. For medical tourists, we recommend an initial videoconsult to discuss your clinical and travel requirements. 
                             </p>
                             <p class="text-justify">
-                                <span class="font-weight-bold text-info">Careers:</span> If you possess a background in healthcare and wish to work for Orthosport Clinic, kindly send us a message.  
+                                <span class="font-weight-bold text-info">Careers:</span> If you possess a background in healthcare and wish to work for Orthosport Clinic<sup>TM</sup>, kindly send us a message.  
                             </p>
                         </div>
                     </div>

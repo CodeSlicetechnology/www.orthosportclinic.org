@@ -38,9 +38,9 @@
           </div>
           <div class="col-12 col-md-8 h-100 bg-white">
             <div class="auto-form-wrapper d-flex align-items-center justify-content-center flex-column pt-2">
+              <img class="mb-4 text-center" src="{{ asset('website/img/logo.png') }}" alt="logo" />
               <form autocomplete="off" method="POST" action="{{ route('login') }}" id="signInForm">
                 @csrf
-                <img class="h-100 mb-4" src="{{ asset('website/img/logo.png') }}" alt="logo" style="width:100%; max-height:30%;" />
 
                 @if ($errors->has('email'))
                     <p class="text-danger mb-2 font-weight-normal pt-2" role="alert">
