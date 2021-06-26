@@ -7,20 +7,20 @@
                         <li>
                             <a href="javascript::void(0)">
                                 <i class="bx bx-time"></i>
-                                Mon-Fri 9am-6pm
+                                {{ $data['contactDetails']->timings }}
                             </a>
                         </li>
                         <li>
-                            <a href="tel:+917619633407">
+                            <a href="tel:+{{ $data['contactDetails']->country_code }}{{ $data['contactDetails']->phone }}">
                                 <i class="bx bx-phone-call"></i>
-                                Call Us: (+91) 761 963 3407
+                                Call Us: (+{{ $data['contactDetails']->country_code }}) {{ $data['contactDetails']->phone }}
                             </a>
                         </li>
                         <li>
                             <a
-                                href="mailto:clinicorthosport@gmail.com">
+                                href="mailto:{{ $data['contactDetails']->email }}">
                                 <i class="bx bxs-paper-plane"></i>
-                                Email: clinicorthosport@gmail.com
+                                Email: {{ $data['contactDetails']->email }}
                             </a>
                         </li>
                     </ul>

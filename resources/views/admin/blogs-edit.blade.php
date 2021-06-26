@@ -11,10 +11,10 @@
         <div class="card border-grey border-lighten-3 m-0">
             <div class="card-header border-0 px-0">
                 <h4 class="card-subtitle text-center pt-2">
-                    <span><strong>Update Conditions and Treatments</strong></span>
+                    <span><strong>Edit blog details</strong></span>
                 </h4>                   
-            </div>        
-            
+            </div>         
+
             <div class="card-content">
                 <div class="card-body">
 
@@ -31,23 +31,33 @@
                     </div>
                 @endif
 
-                <form id="bannerSectionForm" method="POST" action="{{ route('conditions-treatments-list') }}" class="form-horizontal" enctype="multipart/form-data">
+                <form id="bannerSectionForm" method="POST" action="{{ route('update-blogs') }}" class="form-horizontal" enctype="multipart/form-data">
                     @csrf
-                    <input type="hidden" name="conditionsAndTreatmentsID" value="{{ $conditionsAndTreatments[0]->id }}">
+                    <input type="hidden" name="blogID" value="{{ $blogs[0]->id }}">
                     <div class="form-group">
-                        <input id="title" type="text" class="form-control" maxlength="150" value="{{ $conditionsAndTreatments[0]->title }}" placeholder="Main Title" name="title" required>              
+                        <input id="title" type="text" class="form-control" maxlength="100" value="{{ $blogs[0]->title }}" placeholder="Blog Title" name="title" required>              
                     </div>
                     
                     <div class="form-group">
-                        <textarea id="description" class="form-control" name="description" required>{{ $conditionsAndTreatments[0]->description }}</textarea>
+                        <textarea id="description" class="form-control" name="description" placeholder="Description" required>{{ $blogs[0]->description }}</textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <p class="mb-1">Blog Thumbnail</p>
+                        <input id="imagePath1" type="file" class="form-control" name="imagePath1" accept="image/*">              
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="hidden" name="oldImagePath1" value="{{ asset('./'.$blogs[0]->image_path) }}">
+                        <img src="{{ asset('./'.$blogs[0]->image_path) }}" alt="Image" style="width: 100px;">              
                     </div>
 
-                    <a href="{{ route('conditions-treatments-list') }}" class="btn btn-secondary" >Go Back</a>
+                    <a href="{{ route('blogs-list') }}" class="btn btn-secondary">Go Back</a>
                     <button type="submit" class="btn btn-success" id="btnbannerSection">Update</button>
                 </form>
                 </div>
             </div>
-                
+        
         </div>
     </div>
 </div>

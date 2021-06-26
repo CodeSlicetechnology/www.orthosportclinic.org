@@ -24,26 +24,7 @@
         center: true,
         dots: true,
         smartSpeed: 1500,
-        responsive: {
-            0: {
-                items: 1,
-            },
-            576: {
-                items: 2,
-            },
-            768: {
-                items: 3,
-            },
-            992: {
-                items: 4,
-            },
-            1200: {
-                items: 5,
-            },
-            1500: {
-                items: 6,
-            },
-        },
+        items: 5
     });
     $(window).on("scroll", function () {
         var scrolled = $(window).scrollTop();

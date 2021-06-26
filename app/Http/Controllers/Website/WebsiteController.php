@@ -13,6 +13,9 @@ use App\Models\ConditionsAndTreatments;
 use App\Models\ClinicalImages;
 use App\Models\GalleryImages;
 use App\Models\ContactForm;
+use App\Models\Blogs;
+use App\Models\ContactDetails;
+use App\Models\ContactAddress;
 use Auth;
 
 class WebsiteController extends Controller
@@ -31,12 +34,14 @@ class WebsiteController extends Controller
         // $associations = Association::viewAssociation($id, $paginate);
         $aboutDoctor = AboutDoctor::viewAboutDoctor($id, $pageFlag);
         $homeSectionOne = HomeSectionOne::viewHomeSectionOne($id);
+        $contactDetails = ContactDetails::viewContactDetails(1);
 
         $data = [
             'homeSectionOne' => $homeSectionOne,
             'commonProcedures' => $commonProcedures,
             // 'associations' => $associations,
-            'aboutDoctor' => $aboutDoctor
+            'aboutDoctor' => $aboutDoctor,
+            'contactDetails' => $contactDetails
         ];
         return view('website.landingPage')->with(["page" => "home", "data" => $data]);
     }
@@ -54,10 +59,12 @@ class WebsiteController extends Controller
         $pageFlag = true;
         $associations = Association::viewAssociation($id, $paginate);
         $aboutDoctor = AboutDoctor::viewAboutDoctor($id, $pageFlag);
+        $contactDetails = ContactDetails::viewContactDetails(1);
         
         $data = [
             'associations' => $associations,
-            'aboutDoctor' => $aboutDoctor
+            'aboutDoctor' => $aboutDoctor,
+            'contactDetails' => $contactDetails
         ];
         return view('website.about')->with(["page" => "about", "data" => $data]);
     }
@@ -74,10 +81,12 @@ class WebsiteController extends Controller
         $paginate = 0;
         // $associations = Association::viewAssociation($id, $paginate);
         $conditionsAndTreatments = ConditionsAndTreatments::viewConditionsAndTreatments($id);
+        $contactDetails = ContactDetails::viewContactDetails(1);
         
         $data = [
             // 'associations' => $associations,
-            'conditionsAndTreatments' => $conditionsAndTreatments
+            'conditionsAndTreatments' => $conditionsAndTreatments,
+            'contactDetails' => $contactDetails
         ];
         return view('website.conditions-and-treatments')->with(["page" => "condTrt", "data" => $data]);
     }
@@ -93,9 +102,11 @@ class WebsiteController extends Controller
         $id = "NA";
         $paginate = 0;
         $galleryImages = GalleryImages::viewGalleryImages($id, $paginate);
+        $contactDetails = ContactDetails::viewContactDetails(1);
         
         $data = [
-            'galleryImages' => $galleryImages
+            'galleryImages' => $galleryImages,
+            'contactDetails' => $contactDetails
         ];
         return view('website.gallery')->with(["page" => "gallery", "data" => $data]);
     }
@@ -111,9 +122,11 @@ class WebsiteController extends Controller
         $id = "NA";
         $paginate = 0;
         $clinicalImages = ClinicalImages::viewClinicalImages($id, $paginate);
+        $contactDetails = ContactDetails::viewContactDetails(1);
         
         $data = [
-            'clinicalImages' => $clinicalImages
+            'clinicalImages' => $clinicalImages,
+            'contactDetails' => $contactDetails
         ];
         return view('website.clinical-images')->with(["page" => "clinicalImg", "data" => $data]);
     }
@@ -126,7 +139,39 @@ class WebsiteController extends Controller
      */
     public function blogs()
     {
-        return view('website.blogs')->with(["page" => "blogs"]);
+        $id = "NA";
+        $paginate = 0;
+        $blogs = Blogs::viewBlogs($id, $paginate);
+        $contactDetails = ContactDetails::viewContactDetails(1);
+        
+        $data = [
+            'blogs' => $blogs,
+            'contactDetails' => $contactDetails
+        ];
+        return view('website.blogs')->with(["page" => "blogs", "data" => $data]);
+    }
+
+    
+    /**
+     * Blogs details page
+     *
+     * @return Blogs details page blade
+     */
+    public function blogDetails($id) {
+        $id = $id;
+        $paginate = 0;
+        $blogs = Blogs::viewBlogs($id, $paginate);
+        $contactDetails = ContactDetails::viewContactDetails(1);
+        
+        $data = [
+            'blogs' => $blogs,
+            'contactDetails' => $contactDetails
+        ];
+        if (count($data['blogs']) > 0) {
+            return view('website.blog-details')->with(["page" => "blogs", "data" => $data]);
+        } else {
+            return redirect('blogs');
+        }
     }
 
     
@@ -137,7 +182,16 @@ class WebsiteController extends Controller
      */
     public function contact()
     {
-        return view('website.contact')->with(["page" => "contact"]);
+        $id = "NA";
+        $paginate = 0;
+        $contactAddress = ContactAddress::viewContactAddress($id, $paginate);
+        $contactDetails = ContactDetails::viewContactDetails(1);
+        
+        $data = [
+            'contactDetails' => $contactDetails,
+            'contactAddress' => $contactAddress
+        ];
+        return view('website.contact')->with(["page" => "contact", "data" => $data]);
     }
 
     public function saveContact(Request $request) {        

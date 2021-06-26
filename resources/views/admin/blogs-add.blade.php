@@ -9,9 +9,9 @@
 <div class="col-12 d-flex align-items-center justify-content-center">
     <div class="col-md-8 col-8 box-shadow-2 p-0">
         <div class="card border-grey border-lighten-3 m-0">
-            <div class="card-header border-0">
+            <div class="card-header border-0 px-0">
                 <h4 class="card-subtitle text-center pt-2">
-                    <span><strong>Add new blog</strong></span>
+                    <span><strong>Create new blog</strong></span>
                 </h4>                   
             </div>         
 
@@ -44,11 +44,11 @@
                     
                     <div class="form-group">
                         <p class="mb-1">Blog Thumbnail</p>
-                        <input id="imagePath1" type="file" class="form-control" name="imagePath1">              
+                        <input id="imagePath1" type="file" class="form-control" name="imagePath1" accept="image/*" required>              
                     </div>
 
                     <a href="{{ route('blogs-list') }}" class="btn btn-secondary">Go Back</a>
-                    <button type="submit" class="btn btn-success" id="btnbannerSection">Update</button>
+                    <button type="submit" class="btn btn-success" id="btnbannerSection">Publish</button>
                 </form>
                 </div>
             </div>

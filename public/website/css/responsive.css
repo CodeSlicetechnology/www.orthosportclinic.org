@@ -849,7 +849,8 @@
     }
 
     .main-banner-area-four .banner-text {
-        top: 0
+        top: 0;
+        padding-top: 15px;
     }
 
     .main-banner-area-four .banner-text span {
@@ -2673,7 +2674,7 @@
         background-color: #fff;
         -webkit-box-shadow: 0 20px 20px 20px rgba(0, 0, 0, .05);
         box-shadow: 0 20px 20px 20px rgba(0, 0, 0, .05);
-        height: 93px
+        height: 110px
     }
 
     .main-banner-area-four .shape {
@@ -2719,5 +2720,9 @@
 
     .mobile-nav nav .navbar-nav {
         height: 378px
+    }
+
+    .mobile-width-60 {
+        width: 60% !important;
     }
 }

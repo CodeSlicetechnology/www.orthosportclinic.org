@@ -9,7 +9,7 @@
 <div class="col-12 d-flex align-items-center justify-content-center">
     <div class="col-md-8 col-8 box-shadow-2 p-0">
         <div class="card border-grey border-lighten-3 m-0">
-            <div class="card-header border-0">
+            <div class="card-header border-0 px-0">
                 <h4 class="card-subtitle text-center pt-2">
                     <span><strong>Clinical Images</strong></span>
                 </h4>  

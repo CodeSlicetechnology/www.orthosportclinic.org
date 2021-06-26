@@ -22,13 +22,13 @@
         </div>
     </div> --}}
 
-    <section class="emergency-department-area pt-100 top-first-section">
+    <section class="emergency-department-area ptb-100 top-first-section">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-12 doctors-detailss">
                     <div class="doctors-history mt-0">
                         <div class="row justify-content-center">                            
-                            <div class="col-sm-12 col-md-2 col-lg-2">
+                            <div class="col-6 col-lg-2">
                                 <div class="assessments-img pb-3">
                                     <img class="width-100 box-shadow" src="{{ asset('./'.$data['aboutDoctor']->doctorImages[1]->image_path) }}" alt="Image">
                                 </div>
@@ -56,7 +56,7 @@
                             </div>
                         </div> 
                         
-                        <div class="emergency-contents rmv-mb-p h3-blue">
+                        <div class="emergency-contents rmv-mb-p h3-blue justify-sub">
                             {!! $data['aboutDoctor']->aboutSectionOne->description !!}
                         </div>
                     </div>
@@ -74,16 +74,14 @@
                                                 {{ $item->title }}
                                             </h5> 
                                         </a>
-                                        <div class="accordion-content rmv-mb-p emergency-contents">
+                                        <div class="accordion-content rmv-mb-p emergency-contents justify-sub">
                                             {!! $item->description !!}
 
                                             @if ($key == 1)
                                                 <div class="work-wrap owl-carousel owl-theme"> 
                                                     @foreach ($data['aboutDoctor']->researchPublishImages as $item)
                                                         <div class="single-work mb-0">
-                                                            <a target="_blank" href="{{ asset('./'.$item->image_path) }}" title="Click to open">
-                                                                <img src="{{ asset('./'.$item->image_path) }}" alt="Image">
-                                                            </a>
+                                                            <img src="{{ asset('./'.$item->image_path) }}" alt="Image">
                                                         </div>
                                                     @endforeach
                                                 </div>

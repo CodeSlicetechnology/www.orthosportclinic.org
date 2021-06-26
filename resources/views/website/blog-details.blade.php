@@ -9,14 +9,14 @@
     {{-- <div class="page-title-area bg-15">
         <div class="container">
             <div class="page-title-content">
-            <h2 class="text-dark">Clinical Images</h2>
+            <h2 class="text-dark">Blogs</h2>
                 <ul>
                     <li>
                         <a class="text-secondary" href="{{ route('/') }}">
                         Home
                         </a>
                     </li>
-                    <li class="active">Clinical Images</li>
+                    <li class="active">Blogs</li>
                 </ul>
             </div>
         </div>
@@ -24,19 +24,18 @@
 
     <section class="blog-area ptb-100 top-first-section">
 		<div class="container">
-			<div class="row">
-				@foreach ($data['clinicalImages'] as $item)
-                    <div class="col-lg-4 col-md-6 pb-3">
-                        <div class="single-blog mobile-width-60 m-auto">
-                            <img src="{{ asset('./'.$item->image_path) }}" alt="Image">
-                            @if ($item->description != null)
-                                <div class="blog-content p-3">
-                                    <p class="mb-0">{{ $item->description }}</p>
-                                </div>
-                            @endif                            
+			<div class="row justify-content-center doctors-detailss">
+				<div class="col-10 doctors-history">
+                    <div class="blog-details-desc">
+                        <div class="article-image text-center pb-4">
+                            <img src="{{ asset('./'.$data['blogs'][0]->image_path) }}" alt="image">
+                        </div>
+                        <div class="article-content">
+                            <h2 class="pb-3 font-20pt">{{ $data['blogs'][0]->title }}</h2>
+                            {!! $data['blogs'][0]->description !!}
                         </div>
                     </div>
-                @endforeach
+                </div>
 			</div>
 		</div>
 	</section>

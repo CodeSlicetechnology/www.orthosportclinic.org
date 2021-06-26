@@ -17,6 +17,7 @@ Route::get('conditions-and-treatments', 'Website\WebsiteController@conditionsAnd
 Route::get('gallery', 'Website\WebsiteController@gallery')->name('gallery');
 Route::get('clinical-images', 'Website\WebsiteController@clinicalImages')->name('clinical-images');
 Route::get('blogs', 'Website\WebsiteController@blogs')->name('blogs');
+Route::get('blog-details/{id}', 'Website\WebsiteController@blogDetails');
 Route::get('contact', 'Website\WebsiteController@contact')->name('contact');
 Route::post('contact', 'Website\WebsiteController@saveContact')->name('contact');
 
@@ -78,6 +79,17 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('save-blogs', 'HomeController@blogsSave')->name('save-blogs');
     Route::post('update-blogs', 'HomeController@blogsUpdate')->name('update-blogs');
     Route::get('blogs-delete/{id}', 'HomeController@blogsDelete');
+
+    
+    Route::get('update-contact','HomeController@updateContactPage')->name('update-contact');
+    Route::post('update-contact','HomeController@updateContact')->name('update-contact');
+    
+    Route::get('contacted-users','HomeController@contactedUsers')->name('contacted-users');
+
+    Route::get('manage-address', 'HomeController@manageAddressList')->name('manage-address');
+    Route::post('manage-address', 'HomeController@manageAddressSave')->name('manage-address');
+    Route::post('update-address', 'HomeController@manageAddressUpdate')->name('update-address');
+    Route::get('delete-address/{id}', 'HomeController@manageAddressDelete');
 
     // change password
     Route::get('/change-password','HomeController@showChangePasswordForm')->name('change-password');

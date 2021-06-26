@@ -19,6 +19,9 @@ use App\Models\ResearchPublishImages;
 use App\Models\ClinicalImages;
 use App\Models\GalleryImages;
 use App\Models\Blogs;
+use App\Models\ContactDetails;
+use App\Models\ContactForm;
+use App\Models\ContactAddress;
 use Illuminate\Support\Facades\File;
 use App\User;
 use Auth;
@@ -52,8 +55,8 @@ class HomeController extends Controller
         
         $request->validate([
             'mainTitle'=>'required|max:50',
-            'subTitle1'=>'required|max:100',
-            'subTitle2'=>'required|max:100',
+            'subTitle1'=>'max:100',
+            'subTitle2'=>'max:100',
             'imagePath1' => 'mimes:jpeg,jpg,png|max:'.$maxSize
         ]);
 
@@ -376,7 +379,7 @@ class HomeController extends Controller
         $maxSize = 600;
         
         $request->validate([
-            'imagePath' => 'mimes:jpeg,jpg,png|max:'.$maxSize
+            'imagePath' => 'required|mimes:jpeg,jpg,png|max:'.$maxSize
         ]);
 
         $filename = "";
@@ -423,7 +426,7 @@ class HomeController extends Controller
         $maxSize = 600;
         
         $request->validate([
-            'imagePath' => 'mimes:jpeg,jpg,png|max:'.$maxSize
+            'imagePath' => 'required|mimes:jpeg,jpg,png|max:'.$maxSize
         ]);
 
         $filename = "";
@@ -471,7 +474,7 @@ class HomeController extends Controller
         $maxSize = 600;
         
         $request->validate([
-            'imagePath' => 'mimes:jpeg,jpg,png|max:'.$maxSize
+            'imagePath' => 'required|mimes:jpeg,jpg,png|max:'.$maxSize
         ]);
 
         $filename = "";
@@ -519,7 +522,7 @@ class HomeController extends Controller
         $maxSize = 600;
         
         $request->validate([
-            'imagePath' => 'mimes:jpeg,jpg,png|max:'.$maxSize
+            'imagePath' => 'required|mimes:jpeg,jpg,png|max:'.$maxSize
         ]);
 
         $filename = "";
@@ -589,14 +592,14 @@ class HomeController extends Controller
         $request->validate([
             'title'=>'required|max:150',
             'description'=>'required',
-            'imagePath' => 'mimes:jpeg,jpg,png|max:'.$maxSize
+            'imagePath1' => 'required|mimes:jpeg,jpg,png|max:'.$maxSize
         ]);
 
         $filename = "";
         $file_path = "";
         $todayDate = date("d-m-YHis");
-        if ($request->hasFile('imagePath')) {
-            $file = Input::file('imagePath');
+        if ($request->hasFile('imagePath1')) {
+            $file = Input::file('imagePath1');
             if ($file->isValid()) {
                 $extension = $file->getClientOriginalExtension();
                 $filename = rand(111, 99999) . '-' . $todayDate . '.' . $extension;
@@ -623,14 +626,14 @@ class HomeController extends Controller
         $request->validate([
             'title'=>'required|max:150',
             'description'=>'required',
-            'imagePath' => 'mimes:jpeg,jpg,png|max:'.$maxSize
+            'imagePath1' => 'mimes:jpeg,jpg,png|max:'.$maxSize
         ]);
 
         $filename = "";
         $file_path = "";
         $todayDate = date("d-m-YHis");
-        if ($request->hasFile('imagePath')) {
-            $file = Input::file('imagePath');
+        if ($request->hasFile('imagePath1')) {
+            $file = Input::file('imagePath1');
             if ($file->isValid()) {
                 $extension = $file->getClientOriginalExtension();
                 $filename = rand(111, 99999) . '-' . $todayDate . '.' . $extension;
@@ -660,5 +663,85 @@ class HomeController extends Controller
         Blogs::where('id', $id)->delete();
 
         return redirect()->back()->with('success', 'Blog deleted successfully');
+    }
+
+
+    public function updateContactPage() {
+        $id = 1;
+        $contactDetails = ContactDetails::viewContactDetails($id);
+        return view('admin.update-contact')->with(["page" => "contactPage", "contactDetails" => $contactDetails]);
+    }
+
+    public function updateContact(Request $request) {        
+        $request->validate([
+            'emailAddress'=>'required|max:150|email',
+            'businessTime'=>'required|max:20',
+            'countryCode'=>'required|max:2',
+            'phoneNumber'=>'required|max:10',
+            'appointmentLink'=>'required'
+        ]);
+
+        $id = 1;
+        $data['email'] = $request->get('emailAddress');
+        $data['timings'] = $request->get('businessTime');
+        $data['country_code'] = $request->get('countryCode');
+        $data['phone'] = $request->get('phoneNumber');
+        $data['appointment_link'] = $request->get('appointmentLink');
+        $data['updated_by'] = Auth::user()->id;
+        ContactDetails::updateContactDetails($id, $data);
+
+        return redirect()->back()->with('success', 'Contact details updated successfully');
+    }
+
+
+    public function contactedUsers() {
+        $id = "NA";
+        $paginate = 0;
+        $contactForm = ContactForm::viewContactForm($id, $paginate);
+        return view('admin.contacted-users')->with(["page" => "contactPage", "contactForm" => $contactForm]);
+    }
+
+    
+    public function manageAddressList() {
+        $id = "NA";
+        $paginate = 0;
+        $contactAddress = ContactAddress::viewContactAddress($id, $paginate);
+        return view('admin.contact-address-list')->with(["page" => "contactPage", "contactAddress" => $contactAddress]);
+    }
+
+    public function manageAddressSave(Request $request) {        
+        $request->validate([
+            'addressTitle'=>'required|max:30',
+            'address'=>'required'
+        ]);
+
+        $data['address_title'] = $request->get('addressTitle');
+        $data['address'] = $request->get('address');
+        $data['userId'] = Auth::user()->id;
+        ContactAddress::addContactAddress($data);
+
+        return redirect()->back()->with('success', 'Contact address created successfully');
+    }
+
+    public function manageAddressUpdate(Request $request) {        
+        $request->validate([
+            'addressTitle1'=>'required|max:30',
+            'address1'=>'required'
+        ]);
+
+        $id = $request->get('addressID');
+        $data['address_title'] = $request->get('addressTitle1');
+        $data['address'] = $request->get('address1');
+        $data['updated_by'] = Auth::user()->id;
+        ContactAddress::updateContactAddress($id, $data);
+
+        return redirect()->back()->with('success', 'Contact address updated successfully');
+    }
+    
+    public function manageAddressDelete($id) {
+        $id = $id;
+        ContactAddress::where('id', $id)->delete();
+
+        return redirect()->back()->with('success', 'Contact address deleted successfully');
     }
 }

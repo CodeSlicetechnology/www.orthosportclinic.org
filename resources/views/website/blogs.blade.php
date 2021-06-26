@@ -22,12 +22,32 @@
         </div>
     </div> --}}
 
-    <section class="blog-area pb-100 pt-100 top-first-section">
+    <section class="blog-area ptb-100 top-first-section">
 		<div class="container">
-			<p class="text-center">No blogs found</p>
+			<div class="row">
+                @if (count($data['blogs']) > 0)
+                    @foreach ($data['blogs'] as $item)
+                        <div class="col-lg-4 col-md-6">
+                            <div class="single-blog">
+                                <a href="{{ url('blog-details/'.$item->id) }}">
+                                    <img src="{{ asset('./'.$item->image_path) }}" alt="Image">
+                                    <div class="blog-content p-3">
+                                        <p class="mb-0">{{ substr($item->title,0,25) }}...</p>
+                                    </div> 
+                                </a>                          
+                            </div>
+                        </div>
+                    @endforeach
+                @else
+                    <div class="col-12 text-center ptb-100 mb-5">
+                        <p>No blogs found</p>
+                    </div>
+                @endif
+				
+			</div>
 		</div>
 	</section>
-
+    <br /><br />
     @include('website.appointmentSection')
 @endsection
 

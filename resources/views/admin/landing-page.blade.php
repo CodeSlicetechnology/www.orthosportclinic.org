@@ -9,7 +9,7 @@
 <div class="col-12 d-flex align-items-center justify-content-center">
     <div class="col-md-8 col-8 box-shadow-2 p-0">
         <div class="card border-grey border-lighten-3 m-0">
-            <div class="card-header border-0">
+            <div class="card-header border-0 px-0">
                 <h4 class="card-subtitle text-center pt-2">
                     <span><strong>Update Banner Content</strong></span>
                 </h4>                   
@@ -39,11 +39,11 @@
                     </div>
                     
                     <div class="form-group">
-                        <input id="subTitle1" type="text" class="form-control" maxlength="100" value="{{ $homeSectionOne->sub_title_1 }}" placeholder="Sub Title 1" name="subTitle1" required>              
+                        <input id="subTitle1" type="text" class="form-control" maxlength="100" value="{{ $homeSectionOne->sub_title_1 }}" placeholder="Sub Title 1" name="subTitle1" >              
                     </div>
                     
                     <div class="form-group">
-                        <input id="subTitle2" type="text" class="form-control" maxlength="100" value="{{ $homeSectionOne->sub_title_2 }}" placeholder="Sub Title 2" name="subTitle2" required>              
+                        <input id="subTitle2" type="text" class="form-control" maxlength="100" value="{{ $homeSectionOne->sub_title_2 }}" placeholder="Sub Title 2" name="subTitle2" >              
                     </div>
                     
                     <div class="form-group">

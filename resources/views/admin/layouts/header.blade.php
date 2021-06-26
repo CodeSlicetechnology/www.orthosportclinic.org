@@ -37,10 +37,10 @@
         <div class="nav-bottom">
             <ul class="navbar-nav">
                 <li class="nav-item dropdown {{ $page == 'landingPage' ? 'active' : '' }}">
-                    <a class="nav-link count-indicator dropdown-toggle" id="dictionary-dropdown" href="#" data-toggle="dropdown">
+                    <a class="nav-link count-indicator dropdown-toggle" id="landing-dropdown" href="#" data-toggle="dropdown">
                     Landing Page
                     </a>
-                    <div class="dropdown-menu dropdown-left navbar-dropdown" aria-labelledby="dictionary-dropdown">
+                    <div class="dropdown-menu dropdown-left navbar-dropdown" aria-labelledby="landing-dropdown">
                         <ul>
                             <li class="dropdown-item">
                                 <a href="{{ route('/home') }}" class="dropdown-link">Banner</a>
@@ -55,10 +55,10 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown {{ $page == 'aboutPage' ? 'active' : '' }}">
-                    <a class="nav-link count-indicator dropdown-toggle" id="dictionary-dropdown" href="#" data-toggle="dropdown">
+                    <a class="nav-link count-indicator dropdown-toggle" id="about-dropdown" href="#" data-toggle="dropdown">
                     About Dr. Alva
                     </a>
-                    <div class="dropdown-menu dropdown-left navbar-dropdown" aria-labelledby="dictionary-dropdown">
+                    <div class="dropdown-menu dropdown-left navbar-dropdown" aria-labelledby="about-dropdown">
                         <ul>
                             <li class="dropdown-item">
                                 <a href="{{ route('about-first-section') }}" class="dropdown-link">Section One</a>
@@ -75,10 +75,10 @@
                     </a>
                 </li>
                 <li class="nav-item dropdown {{ $page == 'imagesPage' ? 'active' : '' }}">
-                    <a class="nav-link count-indicator dropdown-toggle" id="dictionary-dropdown" href="#" data-toggle="dropdown">
+                    <a class="nav-link count-indicator dropdown-toggle" id="images-dropdown" href="#" data-toggle="dropdown">
                     Images
                     </a>
-                    <div class="dropdown-menu dropdown-left navbar-dropdown" aria-labelledby="dictionary-dropdown">
+                    <div class="dropdown-menu dropdown-left navbar-dropdown" aria-labelledby="images-dropdown">
                         <ul>
                             <li class="dropdown-item">
                                 <a href="{{ route('association-images') }}" class="dropdown-link">Associations</a>
@@ -99,6 +99,24 @@
                     <a class="nav-link count-indicator" href="{{ route('blogs-list') }}">
                     Blogs
                     </a>
+                </li>
+                <li class="nav-item dropdown {{ $page == 'contactPage' ? 'active' : '' }}">
+                    <a class="nav-link count-indicator dropdown-toggle" id="contact-dropdown" href="#" data-toggle="dropdown">
+                    Manage Contact
+                    </a>
+                    <div class="dropdown-menu dropdown-left navbar-dropdown" aria-labelledby="contact-dropdown">
+                        <ul>
+                            <li class="dropdown-item">
+                                <a href="{{ route('update-contact') }}" class="dropdown-link">Update Contact Details</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="{{ route('contacted-users') }}" class="dropdown-link">Contacted Users</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="{{ route('manage-address') }}" class="dropdown-link">Manage Address</a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
             </ul>
         </div>

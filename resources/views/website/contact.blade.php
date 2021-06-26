@@ -22,54 +22,45 @@
         </div>
     </div> --}}
 
-    <section class="contact-info-area pt-100 top-first-section">
-        <div class="container-fluid">
-            <div class="row justify-content-center">
-                <div class="col-lg-3 p-0">
-                    <div class="single-contact-info"> <i class="bx bx-location-plus"></i>
-                        <h3>Main Clinic</h3>
-                        <p>Bangalore, India</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 p-0">
-                    <div class="single-contact-info"> <i class="bx bx-location-plus"></i>
-                        <h3>Outstation Clinics</h3>
-                        <p>Mangalore and Coorg</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 p-0">
-                    <div class="single-contact-info"> <i class="bx bxs-paper-plane"></i>
-                        <h3>Email</h3>
-                        <p>
-                            <a href="mailto:clinicorthosport@gmail.com">
-                                <span class="text-dark">clinicorthosport@gmail.com</span>
-                            </a>
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-3 p-0">
-                    <div class="single-contact-info"> <i class="bx bx-phone-call"></i>
-                        <h3>Call Us</h3>
-                        <p>
-                            <a href="tel:+917619633407">
-                                <span class="text-dark">(+91) 761 963 3407</span>
-                            </a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="main-contact-area contact ptb-100 top-first-section">
+        <div class="container">            
+            <div class="contact-wrap contact-pages mb-0">
+                <div class="contact-form">
+                    <div class="row">
+                        <div class="col-lg-5 pb-4">                              
+                            <h3 class="text-blue">
+                                Contact:
+                            </h3>
+                            <p class="font-14pt mb-0">                                
+                                <a href="mailto:{{ $data['contactDetails']->email }}">
+                                    <span class="text-v-center"><i class='bx bx-mail-send'></i></span> <span class="text-dark pl-2">{{ $data['contactDetails']->email }}</span>
+                                </a>
+                            </p>
+                            <p class="font-14pt mb-0">                                
+                                <a href="tel:+{{ $data['contactDetails']->country_code }}{{ $data['contactDetails']->phone }}">
+                                    <span class="text-v-center"><i class='bx bx-phone-call'></i></span> <span class="text-dark pl-2">(+{{ $data['contactDetails']->country_code }}) {{ $data['contactDetails']->phone }}</span>
+                                </a>
+                            </p>
+                            <p class="font-14pt mb-0">                                
+                                <a target="_blank" href="{{ $data['contactDetails']->appointment_link }}">
+                                    <span class="text-v-center"><i class='bx bx-calendar-check' ></i></span> <span class="text-dark pl-2">Book An Appointment <span class="pl-2 text-warning font-10pt"><u>Click here</u></span></span>
+                                </a>
+                            </p>
 
-    <section class="main-contact-area contact ptb-100">
-        <div class="container">
-            <div class="section-title"> <span class="top-title">Contact Us</span>
-                <h2>Send us a message for any query</h2>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-lg-12">
-                    <div class="contact-wrap contact-pages mb-0">
-                        <div class="contact-form">
+                            <hr >
+                            <p class="font-14pt mt-2">                                
+                                <h3 class="text-blue">
+                                    Address:
+                                </h3>
+                                @foreach ($data['contactAddress'] as $item)
+                                    <div class="pb-3">
+                                        <p class="mb-0 font-weight-bold text-info">{{ $item->address_title }}</p>
+                                        <p style="white-space: pre-wrap !important;">{{ $item->address }}</p>
+                                    </div>
+                                @endforeach
+                            </p>
+                        </div>
+                        <div class="col-lg-7">
                             @if(session()->get('success'))
                                 <div class="alert alert-success" role="alert">
                                     Well done! {{ session()->get('success') }} 
@@ -90,7 +81,10 @@
                                 @endforeach
                             @endif
 
-                            
+                                                        
+                            <h3 class="text-blue mb-4">
+                                Send us a message for any query
+                            </h3>
                             <form id="contactForm" method="POST" action="{{ route('contact') }}">
                                 {!! csrf_field() !!}
                                 <div class="row">
@@ -144,15 +138,14 @@
                                     </div>
                                 </div>
                             </form>
-
-                            <div class="pt-4">
-                                <p class="text-justify">
-                                    <span class="font-weight-bold text-info">Interstate/ International Patients:</span>  We offer world class clinical consults to patients from across the globe. For medical tourists, we recommend an initial videoconsult to discuss your clinical and travel requirements. 
-                                </p>
-                                <p class="text-justify">
-                                    <span class="font-weight-bold text-info">Careers:</span> If you possess a background in healthcare and wish to work for Orthosport Clinic, kindly send us a message.  
-                                </p>
-                            </div>
+                        </div>
+                        <div class="col-12 pt-4">
+                            <p class="text-justify">
+                                <span class="font-weight-bold text-info">Interstate/ International Patients:</span>  We offer world class clinical consults to patients from across the globe. For medical tourists, we recommend an initial videoconsult to discuss your clinical and travel requirements. 
+                            </p>
+                            <p class="text-justify">
+                                <span class="font-weight-bold text-info">Careers:</span> If you possess a background in healthcare and wish to work for Orthosport Clinic, kindly send us a message.  
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -160,7 +153,7 @@
             
         </div>
     </section>
-
+    <br /><br />
     @include('website.appointmentSection')
 @endsection
 
