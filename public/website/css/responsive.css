@@ -2725,4 +2725,16 @@
     .mobile-width-60 {
         width: 60% !important;
     }
+
+    .banner-text h2 {
+        font-size: 14pt !important;
+    }
+
+    .banner-text h3 {
+        font-size: 10pt !important;
+    }
+
+    .banner-text p {
+        font-size: 8pt !important;
+    }
 }
