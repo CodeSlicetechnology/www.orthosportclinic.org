@@ -28,7 +28,7 @@
                 <div class="contact-form">
                     <div class="row">
                         <div class="col-lg-5 pb-4">                              
-                            <h3 class="text-blue">
+                            <h3 class="text-dark">
                                 Contact:
                             </h3>
                             <p class="font-14pt mb-0">                                
@@ -49,7 +49,7 @@
 
                             <hr >
                             <p class="font-14pt mt-2">                                
-                                <h3 class="text-blue">
+                                <h3 class="text-dark">
                                     Address:
                                 </h3>
                                 @foreach ($data['contactAddress'] as $item)
@@ -82,7 +82,7 @@
                             @endif
 
                                                         
-                            <h3 class="text-blue mb-4">
+                            <h3 class="text-dark mb-4">
                                 Send us a message for any query
                             </h3>
                             <form id="contactForm" method="POST" action="{{ route('contact') }}">
