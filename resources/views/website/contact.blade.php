@@ -22,7 +22,7 @@
         </div>
     </div> --}}
 
-    <section class="main-contact-area contact ptb-1b00 top-first-section">
+    <section class="main-contact-area contact ptb-100 top-first-section">
         <div class="container">            
             <div class="contact-wrap contact-pages mb-0">
                 <div class="contact-form">
