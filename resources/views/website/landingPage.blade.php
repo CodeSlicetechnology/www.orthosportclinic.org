@@ -9,7 +9,7 @@
     <meta property="og:type" content="Orthopaedic Sport Clinic" />
     <meta property="og:title" content="{{ $data['aboutDoctor']->doctorName }} | Orthopaedic Sport Clinic" />
     <meta property="og:description" content="Dr.Avinash Alva founded the Orthosport Clinic™ with an aim to provide personalized orthopaedic care for every patient seeking our help. Whether your aim is to achieve normal function or to return to high-level sport, we are committed to delivering the highest possible standard of patient care." />
-    <meta property="og:image" content="{{ asset('website/img/logo.png') }}??v=1.1" />
+    <meta property="og:image" content="{{ asset('website/img/favicon_io/android-chrome-512x512.png') }}" />
     <meta property="og:url" content="https://orthosportclinic.org/" />
     <meta property="og:site_name" content="Orthosport Clinic" />
 @endsection
