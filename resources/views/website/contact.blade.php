@@ -1,8 +1,10 @@
 @extends('website.layouts.master')
 
-{{-- @section('my-style')
-
-@endsection --}}
+@section('my-style')
+	<title>Orthopaedic Sport Clinic | Contact Us</title>
+    <meta name="description" content="Dr.Avinash Alva founded the Orthosport Clinic™ with an aim to provide personalized orthopaedic care for every patient seeking our help. Whether your aim is to achieve normal function or to return to high-level sport, we are committed to delivering the highest possible standard of patient care.">
+    <link rel="canonical" href="https://orthosportclinic.org/" />
+@endsection
 
 
 @section('page-content')

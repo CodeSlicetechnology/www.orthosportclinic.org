@@ -1,8 +1,12 @@
 @extends('website.layouts.master')
 
-{{-- @section('my-style')
-
-@endsection --}}
+@section('my-style')
+	<title>{{ substr($data['blogs'][0]->title,0,35) }} | Orthopaedic Sport Clinic</title>
+    <meta name="description" content="Dr.Avinash Alva founded the Orthosport Clinic™ with an aim to provide personalized orthopaedic care for every patient seeking our help. Whether your aim is to achieve normal function or to return to high-level sport, we are committed to delivering the highest possible standard of patient care.">
+    <link rel="canonical" href="https://orthosportclinic.org/" />
+    <meta property="og:title" content="{{ $data['blogs'][0]->title }}" />
+    <meta property="og:image" content="{{ asset('./'.$data['blogs'][0]->image_path) }}" />
+@endsection
 
 
 @section('page-content')

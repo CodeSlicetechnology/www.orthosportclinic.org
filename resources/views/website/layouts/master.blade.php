@@ -4,13 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="Description" content="Ortho Sport Clinic">
-    <meta name="Author" content="Ortho Sport Clinic">
     
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    
-    <title> Ortho Sport Clinic </title>
 
     <link rel="stylesheet" href="{{ asset('website/css/bootstrap.min.css?v=1.3') }}">
     <link rel="stylesheet" href="{{ asset('website/css/owl.theme.default.min.css') }}">
