@@ -17,6 +17,7 @@ use App\Models\Blogs;
 use App\Models\ContactDetails;
 use App\Models\ContactAddress;
 use Auth;
+use Mail;
 
 class WebsiteController extends Controller
 {
@@ -209,6 +210,12 @@ class WebsiteController extends Controller
         $data['subject'] = $request->get('msg_subject');
         $data['message'] = $request->get('message');
         ContactForm::addContactForm($data);
+        $data['messageText'] = $request->get('message');
+
+        Mail::send('mail.mail', $data, function($message) use ($data){
+            $message->to('clinicorthosport@gmail.com', 'Ortho Sport Clinic')->subject('Contact Details - Ortho Sport Clinic');
+            $message->from('noreply@orthosportclinic.org','Ortho Sport Clinic |'.$data['name']);
+        });
         
         return redirect()->back()->with('success', 'Message Submitted!');
 

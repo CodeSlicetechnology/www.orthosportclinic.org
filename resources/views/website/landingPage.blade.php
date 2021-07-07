@@ -1,13 +1,13 @@
 @extends('website.layouts.master')
 
 @section('my-style')
-	<title>{{ $data['aboutDoctor']->doctorName }} | Orthopaedic Sport Clinic</title>
+	<title>{{ $data['aboutDoctor']->doctorName }} | Sports Surgery & Joint Replacement Clinic</title>
     <meta name="description" content="Dr.Avinash Alva founded the Orthosport Clinic™ with an aim to provide personalized orthopaedic care for every patient seeking our help. Whether your aim is to achieve normal function or to return to high-level sport, we are committed to delivering the highest possible standard of patient care.">
     <meta name="robots" content="index, follow">
     <meta name="keywords" content="orthopaedic clinic, Dr. Avinash Alva, Dr.Avinash Alva, Avinash Alva, orthopaedic, orthosport, orthosport clinic, health care, india, mangalore orthosport clinic, orthosport clinic in india, orthosport clinic in mangalore, orthosport clinic in bangalore">
     <link rel="canonical" href="https://orthosportclinic.org/" />
-    <meta property="og:type" content="Orthopaedic Sport Clinic" />
-    <meta property="og:title" content="{{ $data['aboutDoctor']->doctorName }} | Orthopaedic Sport Clinic" />
+    <meta property="og:type" content="Sports Surgery & Joint Replacement Clinic" />
+    <meta property="og:title" content="{{ $data['aboutDoctor']->doctorName }} | Sports Surgery & Joint Replacement Clinic" />
     <meta property="og:description" content="Dr.Avinash Alva founded the Orthosport Clinic™ with an aim to provide personalized orthopaedic care for every patient seeking our help. Whether your aim is to achieve normal function or to return to high-level sport, we are committed to delivering the highest possible standard of patient care." />
     <meta property="og:image" content="{{ asset('website/img/favicon_io/android-chrome-512x512.png') }}" />
     <meta property="og:url" content="https://orthosportclinic.org/" />

@@ -1,7 +1,7 @@
 @extends('website.layouts.master')
 
 @section('my-style')
-	<title>Orthopaedic Gallery | Orthopaedic Sport Clinic</title>
+	<title>Orthopaedic Gallery | Sports Surgery & Joint Replacement Clinic</title>
     <meta name="description" content="Dr.Avinash Alva founded the Orthosport Clinic™ with an aim to provide personalized orthopaedic care for every patient seeking our help. Whether your aim is to achieve normal function or to return to high-level sport, we are committed to delivering the highest possible standard of patient care.">
     <link rel="canonical" href="https://orthosportclinic.org/" />
 @endsection
