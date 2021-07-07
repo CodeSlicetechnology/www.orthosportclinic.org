@@ -95,6 +95,11 @@
                         </ul>
                     </div>
                 </li>
+                <li class="nav-item dropdown {{ $page == 'videoPage' ? 'active' : '' }}">
+                    <a class="nav-link count-indicator" href="{{ route('gallery-videos') }}">
+                    video
+                    </a>
+                </li>
                 <li class="nav-item dropdown {{ $page == 'blogsPage' ? 'active' : '' }}">
                     <a class="nav-link count-indicator" href="{{ route('blogs-list') }}">
                     Blogs

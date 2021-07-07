@@ -16,6 +16,7 @@ use App\Models\ContactForm;
 use App\Models\Blogs;
 use App\Models\ContactDetails;
 use App\Models\ContactAddress;
+use App\Models\GalleryVideos;
 use Auth;
 use Mail;
 
@@ -94,11 +95,11 @@ class WebsiteController extends Controller
 
     
     /**
-     * Gallery us page
+     * Gallery images page
      *
-     * @return Gallery us page blade
+     * @return Gallery images page blade
      */
-    public function gallery()
+    public function galleryImagesView()
     {
         $id = "NA";
         $paginate = 0;
@@ -109,7 +110,27 @@ class WebsiteController extends Controller
             'galleryImages' => $galleryImages,
             'contactDetails' => $contactDetails
         ];
-        return view('website.gallery')->with(["page" => "gallery", "data" => $data]);
+        return view('website.gallery-images')->with(["page" => "gallery", "data" => $data]);
+    }
+
+    
+    /**
+     * Gallery Videos page
+     *
+     * @return Gallery Videos page blade
+     */
+    public function galleryVideosView()
+    {
+        $id = "NA";
+        $paginate = 0;
+        $galleryVideos = GalleryVideos::viewGalleryVideos($id, $paginate);
+        $contactDetails = ContactDetails::viewContactDetails(1);
+        
+        $data = [
+            'galleryVideos' => $galleryVideos,
+            'contactDetails' => $contactDetails
+        ];
+        return view('website.gallery-videos')->with(["page" => "gallery", "data" => $data]);
     }
 
     

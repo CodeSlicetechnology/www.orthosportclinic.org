@@ -85,7 +85,18 @@
                                     <a href="{{ route('blogs') }}" class="nav-link {{ $page == 'blogs' ? 'active' : '' }}">Blogs</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ route('gallery') }}" class="nav-link {{ $page == 'gallery' ? 'active' : '' }}">Gallery</a>
+                                    <a href="javascript::void(0);" class="nav-link dropdown-toggle {{ $page == 'gallery' ? 'active' : '' }}">
+                                        Gallery
+                                        <i class="bx bx-plus"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+                                            <a href="{{ route('gallery/images') }}" class="nav-link">Images</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="{{ route('gallery/videos') }}" class="nav-link">Videos</a>
+                                        </li>
+                                    </ul>
                                 </li>
                                 <li class="nav-item">
                                     <a href="{{ route('contact') }}" class="nav-link {{ $page == 'contact' ? 'active' : '' }}">Contact Us</a>

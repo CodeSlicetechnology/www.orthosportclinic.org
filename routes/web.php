@@ -14,7 +14,8 @@
 Route::get('/', 'Website\WebsiteController@index')->name('/');
 Route::get('about', 'Website\WebsiteController@about')->name('about');
 Route::get('conditions-and-treatments', 'Website\WebsiteController@conditionsAndTreatments')->name('conditions-and-treatments');
-Route::get('gallery', 'Website\WebsiteController@gallery')->name('gallery');
+Route::get('gallery/images', 'Website\WebsiteController@galleryImagesView')->name('gallery/images');
+Route::get('gallery/videos', 'Website\WebsiteController@galleryVideosView')->name('gallery/videos');
 Route::get('clinical-images', 'Website\WebsiteController@clinicalImages')->name('clinical-images');
 Route::get('blogs', 'Website\WebsiteController@blogs')->name('blogs');
 Route::get('blog-details/{id}', 'Website\WebsiteController@blogDetails');
@@ -71,6 +72,10 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('gallery-images', 'HomeController@galleryImages')->name('gallery-images');
     Route::post('upload-gallery-images', 'HomeController@galleryImagesUpload')->name('upload-gallery-images');
     Route::get('delete-gallery-images/{id}', 'HomeController@galleryImagesDelete');
+
+    Route::get('gallery-videos', 'HomeController@galleryVideos')->name('gallery-videos');
+    Route::post('upload-gallery-videos', 'HomeController@galleryVideosUpload')->name('upload-gallery-videos');
+    Route::get('delete-gallery-videos/{id}', 'HomeController@galleryVideosDelete');
 
     
     Route::get('blogs-list', 'HomeController@blogsList')->name('blogs-list');

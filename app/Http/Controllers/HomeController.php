@@ -18,6 +18,7 @@ use App\Models\Association;
 use App\Models\ResearchPublishImages;
 use App\Models\ClinicalImages;
 use App\Models\GalleryImages;
+use App\Models\GalleryVideos;
 use App\Models\Blogs;
 use App\Models\ContactDetails;
 use App\Models\ContactForm;
@@ -555,6 +556,35 @@ class HomeController extends Controller
         GalleryImages::where('id', $id)->delete();
 
         return redirect()->back()->with('success', 'Image deleted successfully');
+    }
+
+    
+
+    public function galleryVideos() {
+        $id = "NA";
+        $paginate = 0;
+        $galleryVideos = GalleryVideos::viewGalleryVideos($id, $paginate);
+        return view('admin.gallery-videos')->with(["page" => "videoPage", "galleryVideos" => $galleryVideos]);
+    }
+
+    public function galleryVideosUpload(Request $request) {
+        
+        $request->validate([
+            'videoPath' => 'required'
+        ]);
+
+        $data['video_path'] = $request->get('videoPath');
+        $data['userId'] = Auth::user()->id;
+        GalleryVideos::addGalleryVideos($data);
+
+        return redirect()->back()->with('success', 'Video uploaded successfully');
+    }
+    
+    public function galleryVideosDelete($id) {
+        $id = $id;
+        GalleryVideos::where('id', $id)->delete();
+
+        return redirect()->back()->with('success', 'Video deleted successfully');
     }
 
 
